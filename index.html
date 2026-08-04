@@ -1,0 +1,1930 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Wild Tantra с Пемой Гитамой — семь дней практики присутствия, тела, сердца и речи в Португалии, 5–11 октября 2026.">
+  <title>Wild Tantra · Пема Гитама · 5–11 октября 2026</title>
+  <style>
+    :root {
+      --bg: #f5f6f1;
+      --surface: #ffffff;
+      --surface-soft: #eceee7;
+      --ink: #171815;
+      --ink-soft: #5c6058;
+      --line: rgba(23, 24, 21, 0.14);
+      --pink: #f3a7d8;
+      --pink-soft: #fdebf7;
+      --lime: #dfff4f;
+      --green: #284d3b;
+      --green-soft: #dfece4;
+      --blue: #315fe9;
+      --warning: #8d5c12;
+      --warning-soft: #fff2d3;
+      --radius-sm: 12px;
+      --radius-md: 20px;
+      --radius-lg: 32px;
+      --shadow: 0 22px 70px rgba(20, 24, 18, 0.10);
+      --page: min(1180px, calc(100vw - 40px));
+      --reading: 760px;
+    }
+
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.55;
+      text-rendering: optimizeLegibility;
+    }
+    img { display: block; width: 100%; }
+    a { color: inherit; }
+    button, a { -webkit-tap-highlight-color: transparent; }
+    :focus-visible { outline: 3px solid var(--blue); outline-offset: 4px; }
+    .skip-link {
+      position: fixed;
+      top: 12px;
+      left: 12px;
+      z-index: 1000;
+      transform: translateY(-160%);
+      background: var(--surface);
+      padding: 12px 16px;
+      border-radius: 10px;
+      box-shadow: var(--shadow);
+    }
+    .skip-link:focus { transform: translateY(0); }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      background: rgba(245, 246, 241, 0.88);
+      backdrop-filter: blur(18px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-shell {
+      width: var(--page);
+      min-height: 70px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+    }
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+    .brand-mark {
+      width: 30px;
+      height: 30px;
+      display: grid;
+      place-items: center;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--pink);
+      font-family: Georgia, serif;
+      font-size: 17px;
+    }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 22px;
+      font-size: 13px;
+      font-weight: 650;
+    }
+    .nav-links a { text-decoration: none; color: var(--ink-soft); }
+    .nav-links a:hover, .nav-links a[aria-current="true"] { color: var(--ink); }
+    .nav-cta,
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 0 20px;
+      border: 1px solid transparent;
+      border-radius: 999px;
+      background: var(--ink);
+      color: #fff !important;
+      text-decoration: none;
+      font-weight: 750;
+      transition: transform 180ms ease, background 180ms ease;
+    }
+    .nav-cta { min-height: 40px; padding-inline: 17px; }
+    .button:hover, .nav-cta:hover { transform: translateY(-2px); background: var(--green); }
+    .button.secondary { background: transparent; border-color: var(--line); color: var(--ink) !important; }
+    .button.secondary:hover { background: var(--surface); }
+    .menu-button {
+      display: none;
+      width: 44px;
+      height: 44px;
+      border-radius: 50%;
+      border: 1px solid var(--line);
+      background: var(--surface);
+      font-size: 19px;
+      cursor: pointer;
+    }
+
+    .hero-art {
+      width: 100%;
+      aspect-ratio: 2048 / 427;
+      min-height: 220px;
+      max-height: 430px;
+      object-fit: cover;
+      object-position: center;
+      background: #1c211d;
+    }
+    .hero {
+      width: var(--page);
+      margin: 0 auto;
+      padding: 72px 0 54px;
+      display: grid;
+      grid-template-columns: minmax(0, 1.3fr) minmax(300px, .7fr);
+      gap: clamp(40px, 8vw, 110px);
+      align-items: start;
+    }
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 9px;
+      margin: 0 0 20px;
+      color: var(--ink-soft);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .eyebrow::before { content: ""; width: 24px; height: 2px; background: var(--pink); }
+    h1, h2, h3, p { margin-top: 0; }
+    h1 {
+      max-width: 820px;
+      margin-bottom: 28px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(48px, 7.2vw, 104px);
+      font-weight: 500;
+      line-height: .94;
+      letter-spacing: -.055em;
+    }
+    .hero-lead {
+      max-width: 700px;
+      margin-bottom: 0;
+      color: var(--ink-soft);
+      font-size: clamp(19px, 2vw, 26px);
+      line-height: 1.42;
+    }
+    .hero-side {
+      padding: 26px;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+    .hero-side h2 { font-size: 16px; margin-bottom: 20px; }
+    .fact-list { display: grid; gap: 0; margin: 0 0 24px; }
+    .fact-row {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 16px;
+      padding: 13px 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+    .fact-row dt { color: var(--ink-soft); }
+    .fact-row dd { margin: 0; font-weight: 700; }
+    .hero-actions { display: flex; flex-wrap: wrap; gap: 10px; }
+
+    .section {
+      width: var(--page);
+      margin: 0 auto;
+      padding: 112px 0;
+      border-top: 1px solid var(--line);
+    }
+    .section.compact { padding-block: 80px; }
+    .section-head {
+      display: grid;
+      grid-template-columns: minmax(180px, .35fr) minmax(0, 1fr);
+      gap: clamp(36px, 8vw, 120px);
+      align-items: start;
+      margin-bottom: 64px;
+    }
+    .section-number {
+      color: var(--ink-soft);
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: .13em;
+      text-transform: uppercase;
+    }
+    .section h2 {
+      max-width: 860px;
+      margin-bottom: 24px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(38px, 5.6vw, 72px);
+      font-weight: 500;
+      line-height: 1.02;
+      letter-spacing: -.045em;
+    }
+    .section-intro {
+      max-width: 770px;
+      margin-bottom: 0;
+      color: var(--ink-soft);
+      font-size: clamp(18px, 1.8vw, 24px);
+    }
+    .reading { max-width: var(--reading); margin-left: auto; margin-right: auto; }
+    .reading p { font-size: 18px; color: #34372f; }
+    .reading p + p { margin-top: 20px; }
+    .large-statement {
+      max-width: 1020px;
+      margin: 70px auto 0;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(30px, 4.8vw, 62px);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      text-align: center;
+    }
+    .highlight { box-shadow: inset 0 -.42em 0 var(--pink-soft); }
+
+    .principle-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 64px;
+    }
+    .principle {
+      min-height: 250px;
+      padding: 28px;
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      border: 1px solid var(--line);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .principle-index { color: var(--ink-soft); font-size: 13px; }
+    .principle h3 { margin: 30px 0 12px; font-size: 24px; line-height: 1.1; }
+    .principle p { margin-bottom: 0; color: var(--ink-soft); }
+    .principle:nth-child(2) { background: var(--pink-soft); }
+    .principle:nth-child(3) { background: var(--green); color: #fff; }
+    .principle:nth-child(3) p, .principle:nth-child(3) .principle-index { color: rgba(255,255,255,.72); }
+
+    .practice-layout {
+      display: grid;
+      grid-template-columns: .75fr 1.25fr;
+      gap: clamp(36px, 8vw, 110px);
+      align-items: start;
+    }
+    .practice-sticky { position: sticky; top: 110px; }
+    .practice-sticky p { color: var(--ink-soft); font-size: 17px; }
+    .method-list { border-top: 1px solid var(--line); }
+    .method {
+      display: grid;
+      grid-template-columns: 70px 1fr;
+      gap: 20px;
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .method span { color: var(--ink-soft); font-size: 13px; font-weight: 700; }
+    .method h3 { margin-bottom: 8px; font-size: 24px; }
+    .method p { margin-bottom: 0; color: var(--ink-soft); }
+
+    .journey {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 0;
+      border-top: 1px solid var(--line);
+      border-bottom: 1px solid var(--line);
+    }
+    .journey-step { padding: 30px 26px 34px; border-right: 1px solid var(--line); }
+    .journey-step:last-child { border-right: 0; }
+    .journey-step small { color: var(--ink-soft); font-weight: 800; }
+    .journey-step h3 { margin: 54px 0 10px; font-size: 24px; }
+    .journey-step p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+    .rhythm {
+      margin-top: 60px;
+      padding: clamp(28px, 5vw, 56px);
+      border-radius: var(--radius-lg);
+      background: var(--ink);
+      color: #fff;
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 60px;
+    }
+    .rhythm h3 { font-family: Georgia, serif; font-size: 38px; font-weight: 500; line-height: 1.05; }
+    .rhythm p { color: rgba(255,255,255,.68); }
+    .rhythm-list { display: grid; gap: 0; }
+    .rhythm-item {
+      display: grid;
+      grid-template-columns: 96px 1fr;
+      gap: 18px;
+      padding: 15px 0;
+      border-bottom: 1px solid rgba(255,255,255,.18);
+    }
+    .rhythm-item strong { color: var(--pink); }
+
+    .transparency {
+      background: var(--warning-soft);
+      border-radius: var(--radius-lg);
+      padding: clamp(28px, 5vw, 64px);
+    }
+    .transparency-head {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 60px;
+      margin-bottom: 40px;
+    }
+    .transparency h2 { font-size: clamp(38px, 5vw, 64px); }
+    .transparency-head p { color: #655329; font-size: 18px; }
+    .checklist {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 12px;
+    }
+    .check-item {
+      padding: 22px;
+      background: rgba(255,255,255,.68);
+      border: 1px solid rgba(141,92,18,.17);
+      border-radius: var(--radius-sm);
+    }
+    .check-item strong { display: block; margin-bottom: 6px; }
+    .check-item p { margin: 0; color: #655329; font-size: 15px; }
+    .notice {
+      margin-top: 16px;
+      padding: 18px 20px;
+      border-left: 4px solid var(--warning);
+      background: rgba(255,255,255,.52);
+      color: #554720;
+      font-size: 14px;
+    }
+
+    .pema-layout {
+      display: grid;
+      grid-template-columns: minmax(300px, .82fr) minmax(0, 1.18fr);
+      gap: clamp(36px, 8vw, 110px);
+      align-items: center;
+    }
+    .portrait {
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      object-position: center 30%;
+      border-radius: var(--radius-lg);
+      filter: grayscale(1);
+    }
+    .pema-copy h2 { font-size: clamp(42px, 5.7vw, 74px); }
+    .pema-copy p { max-width: 650px; color: var(--ink-soft); font-size: 18px; }
+    .pull-quote {
+      margin: 34px 0 0;
+      padding-left: 22px;
+      border-left: 3px solid var(--pink);
+      font-family: Georgia, serif;
+      font-size: 26px;
+      line-height: 1.32;
+    }
+    .quote-art { margin-top: 56px; border-radius: var(--radius-md); }
+
+    .venue-hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 560px;
+      border-radius: var(--radius-lg);
+      background: #d7ddcf;
+    }
+    .venue-hero img { position: absolute; inset: 0; height: 100%; object-fit: cover; }
+    .venue-card {
+      position: absolute;
+      left: 28px;
+      bottom: 28px;
+      width: min(520px, calc(100% - 56px));
+      padding: 28px;
+      border-radius: var(--radius-md);
+      background: rgba(255,255,255,.92);
+      backdrop-filter: blur(14px);
+    }
+    .venue-card h3 { font-family: Georgia, serif; font-size: 34px; font-weight: 500; }
+    .venue-card p { color: var(--ink-soft); }
+    .text-link { color: var(--blue); font-weight: 750; text-underline-offset: 3px; }
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 14px;
+      margin-top: 14px;
+    }
+    .gallery figure { margin: 0; overflow: hidden; border-radius: var(--radius-md); background: #dfe2da; }
+    .gallery figure:nth-child(1) { grid-column: span 5; }
+    .gallery figure:nth-child(2) { grid-column: span 7; }
+    .gallery figure:nth-child(3) { grid-column: span 4; }
+    .gallery figure:nth-child(4) { grid-column: span 4; }
+    .gallery figure:nth-child(5) { grid-column: span 4; }
+    .gallery img { height: 100%; min-height: 320px; object-fit: cover; transition: transform 400ms ease; }
+    .gallery figure:hover img { transform: scale(1.025); }
+
+    .testimonial-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: end;
+      margin-bottom: 48px;
+    }
+    .portrait-strip { display: flex; align-items: center; }
+    .portrait-strip img {
+      width: 76px;
+      height: 76px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 4px solid var(--bg);
+      margin-left: -15px;
+    }
+    .portrait-strip img:first-child { margin-left: 0; }
+    .testimonials {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+    }
+    .testimonial {
+      min-height: 300px;
+      padding: clamp(24px, 4vw, 38px);
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+    .testimonial:nth-child(3) { background: var(--green); color: #fff; }
+    .testimonial:nth-child(3) p { color: rgba(255,255,255,.85); }
+    .testimonial p { font-family: Georgia, serif; font-size: clamp(19px, 2.2vw, 27px); line-height: 1.35; }
+    .testimonial footer { display: flex; justify-content: space-between; gap: 20px; align-items: end; color: var(--ink-soft); font-size: 13px; }
+    .testimonial:nth-child(3) footer { color: rgba(255,255,255,.68); }
+    .testimonial footer a { font-weight: 800; }
+
+    .podcasts {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 18px;
+    }
+    .podcast {
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: var(--radius-md);
+      background: var(--surface);
+    }
+    .video-frame { aspect-ratio: 16 / 9; background: #111; }
+    .video-frame iframe { width: 100%; height: 100%; border: 0; }
+    .podcast-copy { padding: 22px; }
+    .podcast-copy small { color: var(--ink-soft); text-transform: uppercase; letter-spacing: .12em; font-weight: 800; }
+    .podcast-copy h3 { margin: 12px 0 0; font-size: 19px; line-height: 1.3; }
+
+    .price-layout {
+      display: grid;
+      grid-template-columns: .86fr 1.14fr;
+      gap: clamp(36px, 8vw, 100px);
+      align-items: start;
+    }
+    .price-panel {
+      padding: clamp(28px, 4vw, 44px);
+      border-radius: var(--radius-lg);
+      background: var(--pink-soft);
+    }
+    .price-panel h2 { font-size: clamp(42px, 5vw, 68px); }
+    .price-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+      padding: 18px 0;
+      border-top: 1px solid rgba(23,24,21,.14);
+    }
+    .price-row span { color: var(--ink-soft); }
+    .price-row strong { font-family: Georgia, serif; font-size: 30px; white-space: nowrap; }
+    .process { counter-reset: step; }
+    .process-step {
+      counter-increment: step;
+      display: grid;
+      grid-template-columns: 52px 1fr;
+      gap: 18px;
+      padding: 20px 0;
+      border-bottom: 1px solid var(--line);
+    }
+    .process-step::before {
+      content: counter(step, decimal-leading-zero);
+      color: var(--ink-soft);
+      font-size: 13px;
+      font-weight: 800;
+    }
+    .process-step h3 { margin-bottom: 7px; font-size: 21px; }
+    .process-step p { margin: 0; color: var(--ink-soft); }
+
+    .faq { max-width: 900px; margin: 0 auto; border-top: 1px solid var(--line); }
+    .faq-item { border-bottom: 1px solid var(--line); }
+    .faq-question {
+      width: 100%;
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border: 0;
+      background: transparent;
+      color: var(--ink);
+      text-align: left;
+      font: inherit;
+      font-size: 20px;
+      font-weight: 750;
+      cursor: pointer;
+    }
+    .faq-question span:last-child { font-size: 28px; font-weight: 400; transition: transform 180ms ease; }
+    .faq-question[aria-expanded="true"] span:last-child { transform: rotate(45deg); }
+    .faq-answer { display: none; max-width: 760px; padding: 0 0 26px; color: var(--ink-soft); font-size: 17px; }
+    .faq-answer.open { display: block; }
+
+    .final-cta {
+      width: var(--page);
+      margin: 0 auto 40px;
+      padding: clamp(38px, 7vw, 90px);
+      border-radius: var(--radius-lg);
+      background: var(--ink);
+      color: #fff;
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 60px;
+      align-items: end;
+    }
+    .final-cta h2 {
+      margin-bottom: 20px;
+      font-family: Georgia, serif;
+      font-size: clamp(44px, 6vw, 82px);
+      font-weight: 500;
+      line-height: .98;
+      letter-spacing: -.045em;
+    }
+    .final-cta p { max-width: 640px; color: rgba(255,255,255,.67); font-size: 18px; }
+    .final-cta .button { width: 100%; min-height: 58px; background: var(--lime); color: var(--ink) !important; }
+    .final-cta .button:hover { background: var(--pink); }
+    .cta-note { margin: 14px 0 0; color: rgba(255,255,255,.56); font-size: 13px; text-align: center; }
+
+    .site-footer {
+      width: var(--page);
+      margin: 0 auto;
+      padding: 28px 0 48px;
+      display: flex;
+      justify-content: space-between;
+      gap: 28px;
+      color: var(--ink-soft);
+      font-size: 13px;
+    }
+    .footer-links { display: flex; flex-wrap: wrap; gap: 18px; }
+
+    @media (max-width: 980px) {
+      .nav-links {
+        position: fixed;
+        inset: 70px 20px auto;
+        display: none;
+        padding: 20px;
+        border: 1px solid var(--line);
+        border-radius: var(--radius-md);
+        background: var(--surface);
+        box-shadow: var(--shadow);
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links a { padding: 8px 4px; }
+      .menu-button { display: grid; place-items: center; }
+      .hero, .section-head, .practice-layout, .pema-layout, .price-layout { grid-template-columns: 1fr; }
+      .hero { padding-top: 54px; }
+      .hero-side { max-width: 620px; }
+      .section-head { gap: 18px; }
+      .practice-sticky { position: static; }
+      .journey { grid-template-columns: repeat(2, 1fr); }
+      .journey-step:nth-child(2) { border-right: 0; }
+      .journey-step:nth-child(-n+2) { border-bottom: 1px solid var(--line); }
+      .rhythm, .transparency-head, .final-cta { grid-template-columns: 1fr; }
+      .gallery figure:nth-child(n) { grid-column: span 6; }
+      .gallery figure:last-child { grid-column: span 12; }
+      .price-panel { order: 2; }
+    }
+
+    @media (max-width: 720px) {
+      :root { --page: min(100% - 28px, 1180px); }
+      .nav-shell { min-height: 64px; }
+      .nav-links { inset: 64px 14px auto; }
+      .hero-art { min-height: 180px; object-position: center; }
+      .hero { padding: 44px 0 38px; gap: 30px; }
+      h1 { font-size: clamp(47px, 15vw, 70px); }
+      .section { padding: 82px 0; }
+      .section.compact { padding-block: 60px; }
+      .section-head { margin-bottom: 40px; }
+      .principle-grid, .checklist, .testimonials, .podcasts { grid-template-columns: 1fr; }
+      .principle { min-height: 210px; }
+      .method { grid-template-columns: 48px 1fr; }
+      .journey { grid-template-columns: 1fr; }
+      .journey-step { border-right: 0; border-bottom: 1px solid var(--line); }
+      .journey-step:last-child { border-bottom: 0; }
+      .journey-step h3 { margin-top: 30px; }
+      .rhythm { padding: 28px; gap: 26px; }
+      .rhythm-item { grid-template-columns: 74px 1fr; }
+      .transparency { padding: 28px 22px; }
+      .venue-hero { min-height: 620px; }
+      .venue-card { left: 14px; bottom: 14px; width: calc(100% - 28px); padding: 22px; }
+      .gallery { grid-template-columns: 1fr 1fr; }
+      .gallery figure:nth-child(n) { grid-column: auto; }
+      .gallery figure:first-child { grid-column: 1 / -1; }
+      .gallery img { min-height: 240px; }
+      .testimonial-intro { grid-template-columns: 1fr; }
+      .portrait-strip img { width: 64px; height: 64px; }
+      .price-row { align-items: flex-start; flex-direction: column; gap: 4px; }
+      .final-cta { margin-bottom: 18px; padding: 38px 24px; gap: 30px; }
+      .site-footer { flex-direction: column; padding-bottom: 30px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+    }
+
+    /* Notion-style document skin */
+    :root {
+      --bg: #ffffff;
+      --surface: #ffffff;
+      --surface-soft: #f7f7f5;
+      --ink: #37352f;
+      --ink-soft: #787774;
+      --line: #e9e9e7;
+      --pink: #eb5757;
+      --pink-soft: #fbe4e4;
+      --lime: #2383e2;
+      --green: #37352f;
+      --green-soft: #edf3ec;
+      --blue: #2383e2;
+      --warning: #9a6700;
+      --warning-soft: #fbf3db;
+      --radius-sm: 3px;
+      --radius-md: 4px;
+      --radius-lg: 5px;
+      --shadow: none;
+      --page: min(900px, calc(100vw - 48px));
+      --reading: 720px;
+    }
+
+    html { scroll-padding-top: 64px; }
+    body {
+      background: #fff;
+      color: var(--ink);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.55;
+      letter-spacing: 0;
+    }
+    a { text-underline-offset: 2px; }
+    :focus-visible { outline: 2px solid rgba(35, 131, 226, .75); outline-offset: 2px; }
+
+    .site-header {
+      position: sticky;
+      background: rgba(255, 255, 255, .96);
+      backdrop-filter: none;
+      border-bottom-color: var(--line);
+    }
+    .nav-shell {
+      width: 100%;
+      min-height: 46px;
+      padding: 0 16px;
+    }
+    .brand {
+      gap: 8px;
+      color: var(--ink);
+      font-size: 14px;
+      font-weight: 600;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .brand-mark {
+      width: 24px;
+      height: 24px;
+      border-radius: 3px;
+      background: #37352f;
+      color: #fff;
+      font-family: Georgia, serif;
+      font-size: 14px;
+    }
+    .nav-links { gap: 6px; font-size: 14px; font-weight: 500; }
+    .nav-links > a:not(.nav-cta) { display: none; }
+    .nav-cta,
+    .button {
+      min-height: 36px;
+      padding: 0 14px;
+      border-radius: 4px;
+      background: var(--blue);
+      font-size: 14px;
+      font-weight: 600;
+      box-shadow: none;
+      transition: background-color 120ms ease;
+    }
+    .nav-cta { min-height: 30px; padding-inline: 10px; }
+    .button:hover, .nav-cta:hover { transform: none; background: #1b6ca8; }
+    .button.secondary {
+      background: #fff;
+      border-color: rgba(55, 53, 47, .18);
+      color: var(--ink) !important;
+    }
+    .button.secondary:hover { background: var(--surface-soft); }
+    .menu-button { display: none !important; }
+
+    #top { width: min(1200px, 100%); margin: 0 auto; }
+    .hero-art {
+      width: 100%;
+      min-height: 180px;
+      max-height: 300px;
+      margin: 0;
+      border-radius: 0;
+      object-fit: cover;
+    }
+    .hero {
+      width: var(--page);
+      padding: 52px 0 44px;
+      display: block;
+    }
+    .eyebrow {
+      display: block;
+      margin: 0 0 14px;
+      color: var(--ink-soft);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .eyebrow::before { display: none; }
+    h1, h2, h3 { font-family: inherit; color: var(--ink); letter-spacing: -.025em; }
+    h1 {
+      max-width: 760px;
+      margin-bottom: 16px;
+      font-family: inherit;
+      font-size: clamp(38px, 5vw, 50px);
+      font-weight: 700;
+      line-height: 1.15;
+      letter-spacing: -.035em;
+    }
+    .hero-lead {
+      max-width: 760px;
+      color: var(--ink-soft);
+      font-size: 18px;
+      line-height: 1.55;
+    }
+    .hero-side {
+      margin-top: 34px;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      background: transparent;
+    }
+    .hero-side h2 { margin-bottom: 10px; font-size: 17px; font-weight: 650; }
+    .fact-list {
+      width: 100%;
+      margin-bottom: 18px;
+      border-top: 1px solid var(--line);
+      border-left: 1px solid var(--line);
+    }
+    .fact-row {
+      grid-template-columns: minmax(140px, .32fr) 1fr;
+      gap: 0;
+      padding: 0;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      font-size: 14px;
+    }
+    .fact-row dt, .fact-row dd {
+      min-height: 44px;
+      padding: 10px 12px;
+      border-right: 1px solid var(--line);
+    }
+    .fact-row dt { color: var(--ink-soft); background: #fafafa; }
+    .fact-row dd { font-weight: 500; }
+    .hero-actions { gap: 8px; }
+
+    .section,
+    .section.compact {
+      width: var(--page);
+      padding: 58px 0;
+      border-top: 1px solid var(--line);
+    }
+    .section-head {
+      display: block;
+      margin-bottom: 28px;
+    }
+    .section-number {
+      display: block;
+      margin-bottom: 9px;
+      color: var(--ink-soft);
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0;
+      text-transform: none;
+    }
+    .section h2,
+    .pema-copy h2,
+    .transparency h2,
+    .price-panel h2 {
+      max-width: 760px;
+      margin-bottom: 14px;
+      font-family: inherit;
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -.035em;
+    }
+    .section-intro {
+      max-width: 760px;
+      color: var(--ink-soft);
+      font-size: 17px;
+      line-height: 1.6;
+    }
+    .reading { max-width: 760px; margin: 0; }
+    .reading p { color: var(--ink); font-size: 16px; }
+    .reading p + p { margin-top: 16px; }
+    .large-statement {
+      max-width: 760px;
+      margin: 30px 0 0;
+      padding: 18px 20px;
+      border-left: 3px solid #9b9a97;
+      border-radius: 0;
+      background: var(--surface-soft);
+      font-family: inherit;
+      font-size: 19px;
+      font-weight: 500;
+      line-height: 1.55;
+      letter-spacing: 0;
+      text-align: left;
+    }
+    .highlight { box-shadow: none; background: #fbe4e4; padding: 1px 3px; border-radius: 2px; }
+
+    .principle-grid {
+      grid-template-columns: 1fr;
+      gap: 0;
+      margin-top: 28px;
+      border: 1px solid var(--line);
+      border-bottom: 0;
+    }
+    .principle,
+    .principle:nth-child(2),
+    .principle:nth-child(3) {
+      min-height: 0;
+      padding: 18px 20px;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      border-radius: 0;
+      background: #fff;
+      color: var(--ink);
+      display: grid;
+      grid-template-columns: 145px 1fr;
+      gap: 22px;
+    }
+    .principle:nth-child(3) p,
+    .principle:nth-child(3) .principle-index,
+    .principle-index { color: var(--ink-soft); }
+    .principle h3 { margin: 0 0 4px; font-size: 17px; line-height: 1.35; }
+    .principle p { margin: 0; color: var(--ink-soft); font-size: 15px; }
+
+    .practice-layout { display: block; }
+    .practice-sticky { position: static; max-width: 760px; margin-bottom: 28px; }
+    .practice-sticky p { color: var(--ink-soft); font-size: 16px; }
+    .method-list { border: 1px solid var(--line); border-bottom: 0; }
+    .method {
+      grid-template-columns: 54px 1fr;
+      gap: 14px;
+      padding: 18px 20px;
+      border-bottom-color: var(--line);
+    }
+    .method span { color: var(--ink-soft); font-size: 13px; font-weight: 500; }
+    .method h3 { margin-bottom: 4px; font-size: 17px; }
+    .method p { color: var(--ink-soft); font-size: 15px; }
+    .journey {
+      grid-template-columns: 1fr;
+      margin-top: 28px;
+      border: 1px solid var(--line);
+      border-bottom: 0;
+    }
+    .journey-step {
+      padding: 16px 20px;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      display: grid;
+      grid-template-columns: 100px 150px 1fr;
+      gap: 16px;
+      align-items: baseline;
+    }
+    .journey-step h3 { margin: 0; font-size: 16px; }
+    .journey-step p { font-size: 14px; }
+    .rhythm {
+      margin-top: 28px;
+      padding: 20px;
+      border: 1px solid var(--line);
+      border-radius: 0;
+      background: #fff;
+      color: var(--ink);
+      grid-template-columns: 1fr;
+      gap: 10px;
+    }
+    .rhythm h3 { margin-bottom: 8px; font-family: inherit; font-size: 20px; font-weight: 650; }
+    .rhythm p { color: var(--ink-soft); }
+    .rhythm-item { border-bottom-color: var(--line); }
+    .rhythm-item strong { color: var(--ink); }
+
+    .transparency {
+      padding: 24px;
+      border: 0;
+      border-radius: 3px;
+      background: var(--warning-soft);
+    }
+    .transparency-head { display: block; margin-bottom: 20px; }
+    .transparency-head p { max-width: 760px; color: #6b5c37; font-size: 16px; }
+    .checklist {
+      grid-template-columns: 1fr;
+      gap: 0;
+      border-top: 1px solid rgba(154, 103, 0, .18);
+    }
+    .check-item {
+      padding: 15px 0;
+      border: 0;
+      border-bottom: 1px solid rgba(154, 103, 0, .18);
+      border-radius: 0;
+      background: transparent;
+    }
+    .check-item p { color: #6b5c37; }
+    .notice { margin-top: 18px; padding: 12px 14px; border-left-width: 3px; background: rgba(255,255,255,.5); }
+
+    .pema-layout {
+      grid-template-columns: minmax(220px, .42fr) minmax(0, 1fr);
+      gap: 44px;
+      align-items: start;
+    }
+    .portrait { aspect-ratio: 1 / 1; border-radius: 3px; filter: none; }
+    .pema-copy p { color: var(--ink-soft); font-size: 16px; }
+    .pull-quote {
+      margin-top: 24px;
+      padding: 14px 18px;
+      border-left: 3px solid #9b9a97;
+      background: var(--surface-soft);
+      font-family: inherit;
+      font-size: 17px;
+      line-height: 1.55;
+    }
+    .quote-art { margin-top: 28px; border-radius: 3px; }
+
+    .venue-hero { min-height: 0; overflow: visible; border-radius: 3px; background: transparent; }
+    .venue-hero img { position: static; height: auto; max-height: 560px; object-fit: cover; border-radius: 3px; }
+    .venue-card {
+      position: static;
+      width: 100%;
+      padding: 18px 0 0;
+      border-radius: 0;
+      background: transparent;
+      backdrop-filter: none;
+    }
+    .venue-card h3 { margin-bottom: 8px; font-family: inherit; font-size: 22px; font-weight: 650; }
+    .venue-card p { max-width: 760px; }
+    .text-link { color: var(--blue); font-weight: 500; }
+    .gallery { gap: 8px; margin-top: 24px; }
+    .gallery figure { border-radius: 3px; }
+    .gallery img { min-height: 260px; transition: none; }
+    .gallery figure:hover img { transform: none; }
+
+    .testimonial-intro { display: block; margin-bottom: 24px; }
+    .portrait-strip { margin-top: 18px; }
+    .portrait-strip img { width: 48px; height: 48px; border: 3px solid #fff; margin-left: -10px; }
+    .testimonials { grid-template-columns: 1fr; gap: 0; }
+    .testimonial,
+    .testimonial:nth-child(3) {
+      min-height: 0;
+      padding: 20px 0 20px 18px;
+      border: 0;
+      border-bottom: 1px solid var(--line);
+      border-left: 3px solid #d3d1cb;
+      border-radius: 0;
+      background: #fff;
+      color: var(--ink);
+      display: block;
+    }
+    .testimonial + .testimonial { margin-top: 18px; }
+    .testimonial p,
+    .testimonial:nth-child(3) p { color: var(--ink); font-family: inherit; font-size: 17px; line-height: 1.6; }
+    .testimonial footer,
+    .testimonial:nth-child(3) footer { margin-top: 14px; color: var(--ink-soft); }
+
+    .podcasts { gap: 12px; }
+    .podcast { border-radius: 3px; background: #fff; }
+    .podcast-copy { padding: 16px; }
+    .podcast-copy small { color: var(--ink-soft); font-size: 11px; font-weight: 600; letter-spacing: .08em; }
+    .podcast-copy h3 { margin-top: 8px; font-size: 16px; }
+
+    .price-layout { display: block; }
+    .price-panel { padding: 22px; border-radius: 3px; background: var(--surface-soft); }
+    .price-row strong { font-family: inherit; font-size: 22px; }
+    .process { margin-top: 28px; border-top: 1px solid var(--line); }
+    .process-step { grid-template-columns: 42px 1fr; gap: 12px; padding: 16px 0; }
+    .process-step h3 { margin-bottom: 4px; font-size: 17px; }
+    .process-step p { font-size: 15px; }
+
+    .faq { max-width: none; margin: 0; }
+    .faq-question { padding: 18px 0; font-size: 16px; font-weight: 600; }
+    .faq-question span:last-child { font-size: 22px; }
+    .faq-answer { max-width: 760px; padding-bottom: 18px; font-size: 15px; }
+
+    .final-cta {
+      width: var(--page);
+      margin: 42px auto 28px;
+      padding: 28px;
+      border: 1px solid var(--line);
+      border-radius: 3px;
+      background: var(--surface-soft);
+      color: var(--ink);
+      display: block;
+    }
+    .final-cta h2 {
+      max-width: 720px;
+      margin-bottom: 10px;
+      font-family: inherit;
+      font-size: clamp(28px, 4vw, 36px);
+      font-weight: 700;
+      line-height: 1.25;
+      letter-spacing: -.035em;
+    }
+    .final-cta p { color: var(--ink-soft); font-size: 16px; }
+    .final-cta > div:last-child { margin-top: 18px; max-width: 260px; }
+    .final-cta .button { width: auto; min-height: 38px; background: var(--blue); color: #fff !important; }
+    .final-cta .button:hover { background: #1b6ca8; }
+    .cta-note { color: var(--ink-soft); text-align: left; }
+    .site-footer { padding: 18px 0 36px; border-top: 1px solid var(--line); }
+
+    @media (max-width: 720px) {
+      :root { --page: min(100% - 30px, 900px); }
+      .nav-shell { min-height: 44px; }
+      .nav-cta { display: none; }
+      .hero-art { min-height: 150px; max-height: 220px; }
+      .hero { padding: 36px 0 34px; }
+      h1 { font-size: 38px; }
+      .hero-lead { font-size: 17px; }
+      .fact-row { grid-template-columns: 105px 1fr; }
+      .section, .section.compact { padding: 44px 0; }
+      .section h2, .pema-copy h2, .transparency h2, .price-panel h2 { font-size: 28px; }
+      .principle, .principle:nth-child(2), .principle:nth-child(3) { grid-template-columns: 1fr; gap: 8px; }
+      .method { grid-template-columns: 36px 1fr; padding: 16px; }
+      .journey-step { grid-template-columns: 80px 1fr; gap: 8px 12px; }
+      .journey-step p { grid-column: 2; }
+      .rhythm { padding: 18px; }
+      .transparency { padding: 20px; }
+      .pema-layout { grid-template-columns: 1fr; gap: 24px; }
+      .portrait { max-width: 320px; }
+      .gallery { grid-template-columns: 1fr; }
+      .gallery figure:nth-child(n), .gallery figure:first-child { grid-column: auto; }
+      .gallery img { min-height: 0; aspect-ratio: 4 / 3; }
+      .podcasts { grid-template-columns: 1fr; }
+      .final-cta { padding: 22px; }
+      .final-cta > div:last-child { max-width: none; }
+      .site-footer { flex-direction: column; gap: 14px; }
+    }
+
+    /* Gentle colour accents, inspired by the cover */
+    :root {
+      --accent-pink: #f3dce9;
+      --accent-pink-soft: rgba(243, 220, 233, .48);
+      --accent-green: #dfeadf;
+      --accent-green-soft: rgba(223, 234, 223, .52);
+      --accent-green-strong: #667d68;
+      --blue: #667d68;
+      --warning-soft: #f7f1f5;
+    }
+    .nav-links { display: none !important; }
+    .document-actions {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .language-switch {
+      display: inline-flex;
+      align-items: center;
+      gap: 2px;
+      padding: 2px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: #fff;
+    }
+    .language-switch button {
+      min-width: 34px;
+      min-height: 26px;
+      padding: 0 7px;
+      border: 0;
+      border-radius: 3px;
+      background: transparent;
+      color: var(--ink-soft);
+      font: inherit;
+      font-size: 11px;
+      font-weight: 650;
+      cursor: pointer;
+    }
+    .language-switch button:hover { color: var(--ink); background: var(--surface-soft); }
+    .language-switch button[aria-pressed="true"] { color: #415444; background: var(--accent-green-soft); }
+    .edit-toggle {
+      min-height: 30px;
+      padding: 0 10px;
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      background: #fff;
+      color: var(--ink);
+      font: inherit;
+      font-size: 13px;
+      font-weight: 550;
+      cursor: pointer;
+    }
+    .edit-toggle:hover,
+    .edit-toggle[aria-pressed="true"] { background: var(--accent-green-soft); border-color: #cfdccd; }
+    .edit-toggle[aria-pressed="true"] { color: #415444; }
+    .save-status { color: var(--ink-soft); font-size: 12px; white-space: nowrap; }
+
+    body.editing [contenteditable="true"] {
+      border-radius: 2px;
+      transition: background-color 120ms ease, box-shadow 120ms ease;
+      caret-color: #5f7f65;
+    }
+    body.editing [contenteditable="true"]:hover {
+      background: rgba(223, 234, 223, .42);
+      box-shadow: 0 0 0 3px rgba(223, 234, 223, .42);
+    }
+    body.editing [contenteditable="true"]:focus {
+      outline: 0;
+      background: rgba(243, 220, 233, .38);
+      box-shadow: 0 0 0 3px rgba(243, 220, 233, .52);
+    }
+    body.editing .section,
+    body.editing .hero,
+    body.editing .final-cta { scroll-margin-top: 58px; }
+
+    .fact-list,
+    .method-list,
+    .journey,
+    .principle-grid {
+      overflow: hidden;
+      border-color: rgba(102, 125, 104, .18);
+      background: linear-gradient(115deg, var(--accent-pink-soft), rgba(255,255,255,.76) 42%, var(--accent-green-soft));
+    }
+    .fact-row,
+    .method,
+    .journey-step,
+    .principle,
+    .principle:nth-child(2),
+    .principle:nth-child(3) {
+      border-color: rgba(102, 125, 104, .16);
+      background: rgba(255, 255, 255, .48);
+    }
+    .fact-row dt {
+      border-color: rgba(102, 125, 104, .16);
+      background: rgba(255, 255, 255, .36);
+    }
+    .fact-row dd { border-color: rgba(102, 125, 104, .16); }
+    .method:nth-child(even),
+    .journey-step:nth-child(even),
+    .principle:nth-child(even) { background: rgba(223, 234, 223, .24); }
+    .rhythm {
+      border-color: rgba(102, 125, 104, .18);
+      background: linear-gradient(125deg, rgba(243,220,233,.42), rgba(255,255,255,.82) 48%, rgba(223,234,223,.52));
+    }
+    .rhythm-item { border-color: rgba(102, 125, 104, .15); }
+    .transparency {
+      border: 1px solid rgba(102, 125, 104, .14);
+      background: linear-gradient(135deg, rgba(243,220,233,.52), rgba(255,255,255,.7) 48%, rgba(223,234,223,.64));
+    }
+    .transparency-head p,
+    .check-item p { color: var(--ink-soft); }
+    .checklist { border-color: rgba(102, 125, 104, .16); }
+    .check-item { border-color: rgba(102, 125, 104, .16); }
+    .notice {
+      border-left-color: #8ca08d;
+      background: rgba(255,255,255,.56);
+      color: #536055;
+    }
+    .price-panel,
+    .final-cta {
+      border-color: rgba(102, 125, 104, .17);
+      background: linear-gradient(128deg, rgba(243,220,233,.48), rgba(255,255,255,.72) 48%, rgba(223,234,223,.62));
+    }
+    .text-link { color: #536b57; }
+    .nav-cta,
+    .button,
+    .final-cta .button { background: var(--accent-green-strong); }
+    .nav-cta:hover,
+    .button:hover,
+    .final-cta .button:hover { background: #536b57; }
+
+    .video-frame { position: relative; overflow: hidden; background: #eef1ec; }
+    .video-preview {
+      position: relative;
+      display: block;
+      width: 100%;
+      height: 100%;
+      color: #fff;
+      text-decoration: none;
+    }
+    .video-preview img { width: 100%; height: 100%; object-fit: cover; }
+    .video-preview::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, transparent 45%, rgba(31, 36, 31, .32));
+    }
+    .video-play {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      z-index: 1;
+      width: 54px;
+      height: 38px;
+      display: grid;
+      place-items: center;
+      border-radius: 10px;
+      transform: translate(-50%, -50%);
+      background: rgba(29, 31, 29, .82);
+      color: #fff;
+      font-size: 18px;
+      line-height: 1;
+      transition: transform 150ms ease, background 150ms ease;
+    }
+    .video-preview:hover .video-play { transform: translate(-50%, -50%) scale(1.06); background: #667d68; }
+
+    .main-price { align-items: center; }
+    .main-price strong { font-size: 28px; }
+    .returning-price { margin-top: 12px; border-top: 1px solid rgba(102, 125, 104, .16); }
+    .returning-price summary {
+      padding: 13px 0;
+      color: var(--ink-soft);
+      font-size: 12px;
+      cursor: pointer;
+      list-style: none;
+    }
+    .returning-price summary::-webkit-details-marker { display: none; }
+    .returning-price summary::after { content: "Развернуть  ↓"; margin-left: 8px; color: #536b57; font-weight: 600; }
+    .returning-price[open] summary::after { content: "Свернуть  ↑"; }
+    html[lang="en"] .returning-price summary::after { content: "Expand  ↓"; }
+    html[lang="en"] .returning-price[open] summary::after { content: "Collapse  ↑"; }
+    .returning-price-body {
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      gap: 20px;
+      padding: 4px 0 14px;
+      color: var(--ink-soft);
+      font-size: 13px;
+    }
+    .returning-price-body strong { color: var(--ink); font-size: 20px; white-space: nowrap; }
+
+    @media (max-width: 720px) {
+      .document-actions { gap: 6px; }
+      .document-actions .nav-cta,
+      .save-status { display: none; }
+      .edit-toggle { min-height: 30px; }
+      .language-switch button { min-width: 31px; padding-inline: 5px; }
+      .returning-price-body { align-items: flex-start; flex-direction: column; gap: 4px; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Перейти к содержанию</a>
+
+  <header class="site-header">
+    <nav class="nav-shell" aria-label="Главная навигация">
+      <a class="brand" href="#top" aria-label="Wild Tantra — в начало">
+        <span class="brand-mark">W</span>
+        <span>Wild Tantra</span>
+      </a>
+      <div class="document-actions">
+        <div class="language-switch" role="group" aria-label="Язык страницы">
+          <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+          <button type="button" data-lang="en" aria-pressed="false">EN</button>
+        </div>
+        <span class="save-status" aria-live="polite">Можно редактировать</span>
+        <button class="edit-toggle" type="button" aria-pressed="false">✎ Править</button>
+        <a class="nav-cta" href="https://forms.gle/rR17Kb7JYK9Wnh2K6" target="_blank" rel="noreferrer">Оставить заявку</a>
+      </div>
+      <button class="menu-button" type="button" aria-label="Открыть меню" aria-expanded="false">☰</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#about">О ретрите</a>
+        <a href="#practice">Практика</a>
+        <a href="#clarity">Важно знать</a>
+        <a href="#pema">Пема</a>
+        <a href="#place">Место</a>
+        <a href="#voices">Отзывы</a>
+        <a class="nav-cta" href="https://forms.gle/rR17Kb7JYK9Wnh2K6" target="_blank" rel="noreferrer">Оставить заявку</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <div id="top">
+      <img class="hero-art" src="assets/hero.webp" alt="Wild Tantra с Пемой Гитамой, 5–11 октября, Португалия">
+    </div>
+
+    <section class="hero" aria-labelledby="hero-title">
+      <div>
+        <p class="eyebrow">5–11 октября 2026 · DOMA Portugal</p>
+        <h1 id="hero-title">Вернуться к жизни всем собой</h1>
+        <p class="hero-lead">Семь дней практики присутствия и целостности с Пемой Гитамой — через тело, дыхание, эмоции, сердце, речь и живую встречу с другими.</p>
+      </div>
+      <aside class="hero-side" aria-label="Основные детали ретрита">
+        <h2>Для ориентира</h2>
+        <dl class="fact-list">
+          <div class="fact-row"><dt>Когда</dt><dd>5–11 октября 2026</dd></div>
+          <div class="fact-row"><dt>Где</dt><dd>Португалия, 30 минут от Лиссабона и океана</dd></div>
+          <div class="fact-row"><dt>Мастер</dt><dd>Пема Гитама и команда Wild Tantra</dd></div>
+          <div class="fact-row"><dt>Язык</dt><dd>Английский, без переводчика</dd></div>
+          <div class="fact-row"><dt>Группа</dt><dd>80 человек, поровну мужчин и женщин</dd></div>
+        </dl>
+        <div class="hero-actions">
+          <a class="button" href="https://forms.gle/rR17Kb7JYK9Wnh2K6" target="_blank" rel="noreferrer">Записаться</a>
+          <a class="button secondary" href="#clarity">Сначала разобраться</a>
+        </div>
+      </aside>
+    </section>
+
+    <section class="section" id="about">
+      <header class="section-head">
+        <div class="section-number">01 · О ретрите</div>
+        <div>
+          <h2>Не подавлять. Не разряжать. Проживать осознанно.</h2>
+          <p class="section-intro">Мы привыкли жить из головы: анализировать, держать себя в руках или убегать в бесконечную стимуляцию. Всё это помогает — пока не начинает управлять нами.</p>
+        </div>
+      </header>
+      <div class="reading">
+        <p><strong>Wild Tantra — практика присутствия и целостности.</strong> Опыт осознанного проживания происходящего, когда замечаешь, что происходит в теле, сердце и уме, не спеша это объяснять, подавлять или немедленно разряжать.</p>
+        <p>Ответ жизни постепенно рождается не из привычной реакции, а из контакта с собой — искренне и всем существом.</p>
+        <p>Это не универсальное определение всей тантры, а авторский подход Пемы Гитамы, созданный на принципах традиции Каулы.</p>
+      </div>
+      <p class="large-statement">Тантра не делит внутренний опыт на правильный и неправильный. <span class="highlight">Ни одно проявление энергии не нужно исключать</span> — каждому можно найти место, форму и направление.</p>
+      <div class="principle-grid" aria-label="Три принципа Wild Tantra">
+        <article class="principle">
+          <span class="principle-index">01 / Присутствие</span>
+          <div><h3>Замечать раньше, чем реагировать</h3><p>Возвращаться к ощущениям, дыханию и тонкости восприятия.</p></div>
+        </article>
+        <article class="principle">
+          <span class="principle-index">02 / Целостность</span>
+          <div><h3>Не отрезать неудобное</h3><p>Давать место страху, гневу, ревности, радости, удовольствию и силе.</p></div>
+        </article>
+        <article class="principle">
+          <span class="principle-index">03 / Ответ</span>
+          <div><h3>Действовать всем собой</h3><p>Соединять тело, ум, сердце и речь в один живой ответ.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section compact" aria-labelledby="vahue-title">
+      <header class="section-head">
+        <div class="section-number">Для VAHUE</div>
+        <div>
+          <h2 id="vahue-title">Программа, которая знает, с чем мы приезжаем</h2>
+          <p class="section-intro">В октябре состоится пятый совместный ретрит. Пема уже знает общий бэкграунд сообщества, семейные и поколенческие истории, отношения с телом, собой и другими. Этот накопленный опыт становится частью живой программы.</p>
+        </div>
+      </header>
+    </section>
+
+    <section class="section" id="practice">
+      <div class="practice-layout">
+        <header class="practice-sticky">
+          <p class="section-number">02 · Как устроена практика</p>
+          <h2>Структура есть. Сценарий рождается в группе.</h2>
+          <p>Пема соединяет тантрические медитации, дыхание и работу с праной, телесные практики, ритуалы, методы Каулы и Чод. Что-то проживается наедине, что-то — в паре или всей группой.</p>
+        </header>
+        <div class="method-list">
+          <article class="method"><span>01</span><div><h3>Тело и дыхание</h3><p>Возвращение к ощущениям, естественной чувствительности, удовольствию и способности замечать тонкие изменения.</p></div></article>
+          <article class="method"><span>02</span><div><h3>Мысли и эмоции</h3><p>Исследование того, как мы цепляемся, защищаемся, повторяем знакомое и удерживаем энергию в одних и тех же ловушках.</p></div></article>
+          <article class="method"><span>03</span><div><h3>Сердце и речь</h3><p>Способность услышать свою правду и дать ей стать словами, в которых есть жизнь.</p></div></article>
+          <article class="method"><span>04</span><div><h3>Я, пара, группа</h3><p>Индивидуальная работа переплетается с практиками в парах и общим полем группы. Направление живой работы задаёт то, что происходит прямо сейчас.</p></div></article>
+        </div>
+      </div>
+
+      <div class="journey" aria-label="Логика пути практики">
+        <article class="journey-step"><small>Шаг 01</small><h3>Почувствовать</h3><p>Тело, дыхание, удовольствие и напряжение.</p></article>
+        <article class="journey-step"><small>Шаг 02</small><h3>Увидеть</h3><p>Привычные реакции, защиты и повторения.</p></article>
+        <article class="journey-step"><small>Шаг 03</small><h3>Назвать</h3><p>Правду сердца и слова, которые дают ей форму.</p></article>
+        <article class="journey-step"><small>Шаг 04</small><h3>Соединить</h3><p>Тело, ум, сердце и речь в целое.</p></article>
+      </div>
+
+      <div class="rhythm">
+        <div>
+          <h3>Ритм полного погружения</h3>
+          <p>Это не почасовое обещание программы, а честная рамка нагрузки из исходного описания.</p>
+        </div>
+        <div class="rhythm-list">
+          <div class="rhythm-item"><strong>07:00</strong><span>Начало ежедневной практики</span></div>
+          <div class="rhythm-item"><strong>Днём</strong><span>Практические блоки, веганское питание, паузы на восстановление</span></div>
+          <div class="rhythm-item"><strong>Вечером</strong><span>Продолжение практики и групповая работа до позднего времени</span></div>
+          <div class="rhythm-item"><strong>День 1</strong><span>Общая встреча в 10:00 — важно уже быть на месте</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="clarity">
+      <div class="transparency">
+        <div class="transparency-head">
+          <div><p class="section-number">03 · Важно знать</p><h2>Не оставлять границы на уровне догадок</h2></div>
+          <p>Исходная страница подробно описывает философию, но не отвечает на несколько практических вопросов. До полной оплаты их важно проговорить на ознакомительном звонке.</p>
+        </div>
+        <div class="checklist">
+          <article class="check-item"><strong>Прикосновения и интимность</strong><p>Какие парные практики предполагают физический контакт? Есть ли нагота или сексуальные техники?</p></article>
+          <article class="check-item"><strong>Согласие и отказ</strong><p>Можно ли отказаться от упражнения без объяснений, сменить партнёра или выбрать индивидуальный формат?</p></article>
+          <article class="check-item"><strong>Физическая безопасность</strong><p>Какие есть противопоказания к интенсивному дыханию, длительной нагрузке и другим практикам?</p></article>
+          <article class="check-item"><strong>Эмоциональная поддержка</strong><p>К кому обратиться при сильной реакции? Как устроены индивидуальная поддержка и конфиденциальность?</p></article>
+          <article class="check-item"><strong>Первая и вторая ступени</strong><p>Чем отличаются траектории новых и продолжающих участников внутри объединённой программы 2026 года?</p></article>
+          <article class="check-item"><strong>Интеграция после</strong><p>Есть ли рекомендации, встреча или группа поддержки после возвращения домой?</p></article>
+        </div>
+        <div class="notice"><strong>Редакционное уточнение:</strong> эти ответы нельзя придумывать за команду ретрита. Перед публикацией финальной версии их необходимо заменить официальными правилами Wild Tantra.</div>
+      </div>
+    </section>
+
+    <section class="section" id="pema">
+      <div class="pema-layout">
+        <img class="portrait" src="assets/pema.webp" alt="Пема Гитама">
+        <div class="pema-copy">
+          <p class="section-number">04 · Мастер</p>
+          <h2>Пема Гитама</h2>
+          <p>Больше 25 лет Пема следует и передаёт традицию Тантры Каула. На её принципах она создала WildTantra — собственный подход к практике, раскрытый в трёх книгах и ретритах по всему миру.</p>
+          <p>Пема ведёт так же, как говорит о тантре: не сглаживая и не подгоняя живое под готовую форму. В ней соединяются мягкость и сила, любовь и острота, глубина и дикость.</p>
+          <blockquote class="pull-quote">«Тантра — цветок: её аромат — любовь, её форма — сознание».</blockquote>
+        </div>
+      </div>
+      <img class="quote-art" src="assets/pema-quote.webp" alt="Цитата Пемы Гитамы о тантре и её работе">
+    </section>
+
+    <section class="section" id="place">
+      <header class="section-head">
+        <div class="section-number">05 · Пространство</div>
+        <div><h2>DOMA Portugal</h2><p class="section-intro">Историческая усадьба в сосновом лесу, в получасе от Лиссабона и океана — место для глубокой работы и бережного восстановления.</p></div>
+      </header>
+      <div class="venue-hero">
+        <img src="assets/doma-main.webp" alt="Историческая усадьба DOMA Portugal">
+        <div class="venue-card">
+          <h3>Природа, тишина и пространство для восстановления</h3>
+          <p>Светлый зал для практики, паровой купол, ледяная ванна, террасы, бассейн и комнаты. Каждый день — специальное веганское меню от шефов DOMA, разработанное вместе с Пемой под ритм недели.</p>
+          <a class="text-link" href="https://doma.pt/" target="_blank" rel="noreferrer">Открыть сайт DOMA ↗</a>
+        </div>
+      </div>
+      <div class="gallery" aria-label="Фотографии DOMA Portugal">
+        <figure><img src="assets/doma-road.webp" alt="Дорога через лес к усадьбе DOMA" loading="lazy"></figure>
+        <figure><img src="assets/doma-pool.webp" alt="Бассейн и территория DOMA" loading="lazy"></figure>
+        <figure><img src="assets/doma-room.webp" alt="Комната для проживания в DOMA" loading="lazy"></figure>
+        <figure><img src="assets/doma-bath.webp" alt="Ванная комната с видом на лес" loading="lazy"></figure>
+        <figure><img src="assets/doma-spa.webp" alt="Спа-зона и ледяная ванна" loading="lazy"></figure>
+      </div>
+    </section>
+
+    <section class="section" id="voices">
+      <div class="testimonial-intro">
+        <div><p class="section-number">06 · Отзывы</p><h2>Опыт, который трудно уместить в слова</h2></div>
+        <div class="portrait-strip" aria-label="Участники и герои отзывов">
+          <img src="assets/portrait-1.webp" alt="" loading="lazy">
+          <img src="assets/portrait-2.webp" alt="" loading="lazy">
+          <img src="assets/portrait-3.webp" alt="" loading="lazy">
+          <img src="assets/portrait-4.webp" alt="" loading="lazy">
+          <img src="assets/portrait-5.webp" alt="" loading="lazy">
+        </div>
+      </div>
+      <div class="testimonials">
+        <article class="testimonial"><p>«Я пару раз плакал от одной только мысли, что со мной этот опыт мог бы не случиться. Сначала тебя родили, а потом ещё нужно самому почувствовать себя по-настоящему живым».</p><footer><strong>Егор Руди</strong><a href="https://t.me/s16_guide/42" target="_blank" rel="noreferrer">Читать полностью ↗</a></footer></article>
+        <article class="testimonial"><p>«Насколько ты можешь развернуть в себе боль, настолько же и сила любви вырастет во все измерения над ним».</p><footer><strong>Оля Маркес</strong><a href="https://t.me/URWrong/252" target="_blank" rel="noreferrer">Читать полностью ↗</a></footer></article>
+        <article class="testimonial"><p>«Это было про встречу с Мастером. Сразу стало понятно, какой огромный масштаб держит Пема. Даже во взрослом возрасте можно создать близкие и глубокие отношения».</p><footer><strong>Алексей Иванов</strong><a href="https://t.me/vahueevents/292" target="_blank" rel="noreferrer">Читать полностью ↗</a></footer></article>
+        <article class="testimonial"><p>«Я вернулась домой — к мудрости моего тела, которое всё знало, а я забыла. Давно в моей жизни не было такой ясности, как та, которую я получаю в тантре».</p><footer><strong>Лена Дегтярь</strong><a href="https://t.me/lenadeg/383" target="_blank" rel="noreferrer">Читать полностью ↗</a></footer></article>
+        <article class="testimonial"><p>«Один из самых впечатляющих и глубоких опытов. Исследование взаимодействия, энергии, чувственности, телесности и включённости в момент».</p><footer><strong>Вера Мусаелян</strong><span>Участница Wild Tantra</span></footer></article>
+      </div>
+    </section>
+
+    <section class="section" id="listen">
+      <header class="section-head">
+        <div class="section-number">07 · Слушать</div>
+        <div><h2>Больше о тантре — в разговорах</h2><p class="section-intro">Пема, участники и ведущие VAHUE говорят о том, что происходит на практике и зачем люди возвращаются.</p></div>
+      </header>
+      <div class="podcasts">
+        <article class="podcast"><div class="video-frame"><a class="video-preview" href="https://www.youtube.com/watch?v=oKold6HmXhQ&amp;t=10s" target="_blank" rel="noreferrer" aria-label="Смотреть подкаст Оли Маркес и Димы Мацкевича с Пемой Гитамой на YouTube"><img src="https://i.ytimg.com/vi/oKold6HmXhQ/maxresdefault.jpg" alt="Превью подкаста с Пемой Гитамой" loading="lazy"><span class="video-play" aria-hidden="true">▶</span></a></div><div class="podcast-copy"><small>Разговор</small><h3>Оля Маркес и Дима Мацкевич — с Пемой Гитамой</h3></div></article>
+        <article class="podcast"><div class="video-frame"><a class="video-preview" href="https://www.youtube.com/watch?v=bmVgxy54PQY" target="_blank" rel="noreferrer" aria-label="Смотреть разговор после Wild Tantra 2025 на YouTube"><img src="https://i.ytimg.com/vi/bmVgxy54PQY/maxresdefault.jpg" alt="Превью разговора после Wild Tantra 2025" loading="lazy"><span class="video-play" aria-hidden="true">▶</span></a></div><div class="podcast-copy"><small>После ретрита</small><h3>Егор Руди и Дима Мацкевич — сразу после Wild Tantra 2025</h3></div></article>
+        <article class="podcast"><div class="video-frame"><a class="video-preview" href="https://www.youtube.com/watch?v=SIeoJgwNm3Q" target="_blank" rel="noreferrer" aria-label="Смотреть интервью с Сашей Барсуковым на YouTube"><img src="https://i.ytimg.com/vi/SIeoJgwNm3Q/maxresdefault.jpg" alt="Превью интервью с Сашей Барсуковым" loading="lazy"><span class="video-play" aria-hidden="true">▶</span></a></div><div class="podcast-copy"><small>Интервью</small><h3>Саша Барсуков — зачем мужчине отношения и зачем ехать на тантру</h3></div></article>
+        <article class="podcast"><div class="video-frame"><a class="video-preview" href="https://www.youtube.com/watch?v=6hL7IJihrOg" target="_blank" rel="noreferrer" aria-label="Смотреть интервью с Максом Чижовым на YouTube"><img src="https://i.ytimg.com/vi/6hL7IJihrOg/maxresdefault.jpg" alt="Превью интервью с Максом Чижовым" loading="lazy"><span class="video-play" aria-hidden="true">▶</span></a></div><div class="podcast-copy"><small>Короткий разговор</small><h3>Макс Чижов — энергия, намерение и практика тантры</h3></div></article>
+      </div>
+      <p style="margin-top:24px"><a class="text-link" href="https://t.me/lenadeg/391" target="_blank" rel="noreferrer">Эфир Лены Дегтярь и Оли Маркес после Wild Tantra 2024 ↗</a></p>
+    </section>
+
+    <section class="section" id="price">
+      <div class="price-layout">
+        <div class="price-panel">
+          <p class="section-number">08 · Стоимость</p>
+          <h2>Участие</h2>
+          <div class="price-row main-price"><span>Участие в ретрите</span><strong>3 900 €</strong></div>
+          <details class="returning-price">
+            <summary><span>Вы уже не первый ретрит с нами? Для своих есть спецусловия.</span></summary>
+            <div class="returning-price-body"><span>Для тех, кто уже был на тантре с Пемой</span><strong>3 500 €</strong></div>
+          </details>
+          <p style="margin:22px 0 0;color:var(--ink-soft)">Место бронируется после полной предоплаты. Проживание, дорога до Португалии и трансферы в стоимость не входят.</p>
+        </div>
+        <div>
+          <p class="section-number">Как присоединиться</p>
+          <div class="process">
+            <article class="process-step"><div><h3>Заполнить короткую форму</h3><p>Расскажите немного о себе и своём намерении.</p></div></article>
+            <article class="process-step"><div><h3>Пройти ознакомительный звонок</h3><p>Команда расскажет о процессе, ответит на вопросы и вместе с вами поймёт, подходит ли этот опыт сейчас.</p></div></article>
+            <article class="process-step"><div><h3>Получить подтверждение</h3><p>Все заявки сначала попадают в вейтлист. Место закрепляется после решения команды и полной оплаты.</p></div></article>
+          </div>
+          <p style="margin-top:24px;color:var(--ink-soft);font-size:14px">Организаторы отмечают, что мужчинам часто сложнее сделать первый шаг. Поэтому при рассмотрении женских заявок преимущество будет у тех, кто хочет приехать с мужчиной +1 — это может быть партнёр, друг или близкий человек.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <header class="section-head">
+        <div class="section-number">09 · Вопросы</div>
+        <div><h2>Перед тем как решиться</h2><p class="section-intro">То, что уже можно понять из программы — и то, что необходимо уточнить лично.</p></div>
+      </header>
+      <div class="faq">
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Тантра — это обязательно про секс?</span><span aria-hidden="true">+</span></button><div class="faq-answer">Нет, тантра значительно шире сексуальных практик. В описании Wild Tantra основной фокус — присутствие, тело, дыхание, эмоции, сердце и речь. При этом точный формат интимных или контактных практик в исходном тексте не указан: его необходимо прояснить на звонке до оплаты.</div></div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Нужен ли предыдущий опыт?</span><span aria-hidden="true">+</span></button><div class="faq-answer">В 2026 году программа объединяет первую и вторую ступени: для тех, кто приезжает впервые, и для продолжающих. Конкретное различие траекторий стоит уточнить у команды.</div></div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Насколько интенсивен ретрит?</span><span aria-hidden="true">+</span></button><div class="faq-answer">Это семь дней полного погружения. Каждый день начинается в 7:00 и продолжается до позднего вечера. В первый день общая встреча начинается в 10:00.</div></div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Как устроены питание и проживание?</span><span aria-hidden="true">+</span></button><div class="faq-answer">На протяжении недели предусмотрено специальное веганское меню от шефов DOMA, разработанное вместе с Пемой. Проживание оплачивается отдельно; варианты комнат и точную стоимость важно запросить у организаторов.</div></div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Что не входит в стоимость?</span><span aria-hidden="true">+</span></button><div class="faq-answer">Проживание, перелёт или другая дорога до Португалии, а также трансферы не входят в стоимость участия.</div></div>
+        <div class="faq-item"><button class="faq-question" type="button" aria-expanded="false"><span>Можно ли общаться на русском?</span><span aria-hidden="true">+</span></button><div class="faq-answer">Рабочий язык ретрита — английский, переводчик не предусмотрен.</div></div>
+      </div>
+    </section>
+
+    <section class="final-cta" aria-labelledby="cta-title">
+      <div><p class="eyebrow" style="color:rgba(255,255,255,.68)">Wild Tantra · Portugal · 2026</p><h2 id="cta-title">Если тело уже говорит «да»</h2><p>По ссылке — короткая форма. После неё команда напишет и договорится о звонке, чтобы познакомиться, обсудить детали и вместе понять, подходит ли вам этот опыт.</p></div>
+      <div><a class="button" href="https://forms.gle/rR17Kb7JYK9Wnh2K6" target="_blank" rel="noreferrer">Оставить заявку ↗</a><p class="cta-note">Заявка не равна автоматическому бронированию места.</p></div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <span>Wild Tantra · Пема Гитама · VAHUE</span>
+    <div class="footer-links">
+      <a href="https://docs.google.com/document/d/1ADdfoSqPbcwAY9h4TSV3MP3e1m9tedAoWNeiCIJ_p1o/edit?tab=t.0" target="_blank" rel="noreferrer">Публичная оферта</a>
+      <a href="https://docs.google.com/document/d/1x5PdUGkST5k-qh3ZMamEhPQfzpDFN2epwuirqGL3itw/edit?tab=t.0" target="_blank" rel="noreferrer">Политика конфиденциальности</a>
+    </div>
+  </footer>
+
+  <script>
+    const menuButton = document.querySelector('.menu-button');
+    const navLinks = document.querySelector('.nav-links');
+    menuButton.addEventListener('click', () => {
+      const open = menuButton.getAttribute('aria-expanded') === 'true';
+      menuButton.setAttribute('aria-expanded', String(!open));
+      menuButton.textContent = open ? '☰' : '×';
+      navLinks.classList.toggle('open', !open);
+    });
+    navLinks.addEventListener('click', (event) => {
+      if (event.target.closest('a') && navLinks.classList.contains('open')) {
+        navLinks.classList.remove('open');
+        menuButton.setAttribute('aria-expanded', 'false');
+        menuButton.textContent = '☰';
+      }
+    });
+
+    document.querySelectorAll('.faq-question').forEach((button) => {
+      button.addEventListener('click', () => {
+        if (document.body.classList.contains('editing')) return;
+        const answer = button.nextElementSibling;
+        const expanded = button.getAttribute('aria-expanded') === 'true';
+        button.setAttribute('aria-expanded', String(!expanded));
+        answer.classList.toggle('open', !expanded);
+      });
+    });
+
+    const languageParams = new URLSearchParams(window.location.search);
+    const pageLanguage = languageParams.get('lang') === 'en' ? 'en' : 'ru';
+    const englishText = {
+      "Перейти к содержанию": "Skip to content",
+      "Можно редактировать": "Editable",
+      "✎ Править": "✎ Edit",
+      "Оставить заявку": "Apply",
+      "О ретрите": "About",
+      "Практика": "Practice",
+      "Важно знать": "Before you join",
+      "Место": "Venue",
+      "Отзывы": "Stories",
+      "Пема": "Pema",
+      "Пема Гитама": "Pema Gitama",
+      "5–11 октября 2026 · DOMA Portugal": "5–11 October 2026 · DOMA Portugal",
+      "Вернуться к жизни всем собой": "Return to life with your whole being",
+      "Семь дней практики присутствия и целостности с Пемой Гитамой — через тело, дыхание, эмоции, сердце, речь и живую встречу с другими.": "Seven days of presence and wholeness with Pema Gitama — through the body, breath, emotions, heart, speech, and a living encounter with others.",
+      "Для ориентира": "At a glance",
+      "Когда": "When",
+      "5–11 октября 2026": "5–11 October 2026",
+      "Где": "Where",
+      "Португалия, 30 минут от Лиссабона и океана": "Portugal, 30 minutes from Lisbon and the ocean",
+      "Мастер": "Teacher",
+      "Пема Гитама и команда Wild Tantra": "Pema Gitama and the Wild Tantra team",
+      "Язык": "Language",
+      "Английский, без переводчика": "English, without interpretation",
+      "Группа": "Group",
+      "80 человек, поровну мужчин и женщин": "80 people, with an equal number of men and women",
+      "Записаться": "Apply",
+      "Сначала разобраться": "Learn more first",
+      "01 · О ретрите": "01 · About the retreat",
+      "Не подавлять. Не разряжать. Проживать осознанно.": "Do not suppress. Do not discharge. Live it consciously.",
+      "Мы привыкли жить из головы: анализировать, держать себя в руках или убегать в бесконечную стимуляцию. Всё это помогает — пока не начинает управлять нами.": "We are used to living from the head: analysing, controlling ourselves, or escaping into endless stimulation. All of this helps — until it begins to control us.",
+      "Wild Tantra — практика присутствия и целостности.": "Wild Tantra is a practice of presence and wholeness.",
+      "Опыт осознанного проживания происходящего, когда замечаешь, что происходит в теле, сердце и уме, не спеша это объяснять, подавлять или немедленно разряжать.": "It is the experience of consciously living what is happening — noticing the body, heart, and mind without rushing to explain, suppress, or immediately discharge it.",
+      "Ответ жизни постепенно рождается не из привычной реакции, а из контакта с собой — искренне и всем существом.": "A response to life gradually arises not from habitual reaction, but from contact with yourself — sincerely and with your whole being.",
+      "Это не универсальное определение всей тантры, а авторский подход Пемы Гитамы, созданный на принципах традиции Каулы.": "This is not a universal definition of tantra, but Pema Gitama’s own approach, created from the principles of the Kaula tradition.",
+      "Тантра не делит внутренний опыт на правильный и неправильный.": "Tantra does not divide inner experience into right and wrong.",
+      "Ни одно проявление энергии не нужно исключать": "No expression of energy needs to be excluded",
+      "— каждому можно найти место, форму и направление.": "— each can be given a place, a form, and a direction.",
+      "01 / Присутствие": "01 / Presence",
+      "Замечать раньше, чем реагировать": "Notice before reacting",
+      "Возвращаться к ощущениям, дыханию и тонкости восприятия.": "Return to sensation, breath, and subtle perception.",
+      "02 / Целостность": "02 / Wholeness",
+      "Не отрезать неудобное": "Do not cut away what is uncomfortable",
+      "Давать место страху, гневу, ревности, радости, удовольствию и силе.": "Give space to fear, anger, jealousy, joy, pleasure, and strength.",
+      "03 / Ответ": "03 / Response",
+      "Действовать всем собой": "Act with your whole being",
+      "Соединять тело, ум, сердце и речь в один живой ответ.": "Bring body, mind, heart, and speech into one living response.",
+      "Для VAHUE": "For VAHUE",
+      "Программа, которая знает, с чем мы приезжаем": "A programme that knows what we arrive with",
+      "В октябре состоится пятый совместный ретрит. Пема уже знает общий бэкграунд сообщества, семейные и поколенческие истории, отношения с телом, собой и другими. Этот накопленный опыт становится частью живой программы.": "This October will be our fifth retreat together. Pema already knows the community’s shared background, family and generational stories, and our relationships with the body, ourselves, and others. This accumulated experience becomes part of the living programme.",
+      "02 · Как устроена практика": "02 · How the practice works",
+      "Структура есть. Сценарий рождается в группе.": "There is a structure. The path emerges within the group.",
+      "Пема соединяет тантрические медитации, дыхание и работу с праной, телесные практики, ритуалы, методы Каулы и Чод. Что-то проживается наедине, что-то — в паре или всей группой.": "Pema brings together tantric meditation, breath and prana work, embodied practices, ritual, and methods from Kaula and Chöd. Some experiences are individual, others happen in pairs or with the whole group.",
+      "Тело и дыхание": "Body and breath",
+      "Возвращение к ощущениям, естественной чувствительности, удовольствию и способности замечать тонкие изменения.": "A return to sensation, natural sensitivity, pleasure, and the ability to notice subtle change.",
+      "Мысли и эмоции": "Thoughts and emotions",
+      "Исследование того, как мы цепляемся, защищаемся, повторяем знакомое и удерживаем энергию в одних и тех же ловушках.": "Exploring how we cling, defend, repeat what is familiar, and keep energy trapped in the same patterns.",
+      "Сердце и речь": "Heart and speech",
+      "Способность услышать свою правду и дать ей стать словами, в которых есть жизнь.": "The capacity to hear your truth and let it become words that carry life.",
+      "Я, пара, группа": "Self, pair, group",
+      "Индивидуальная работа переплетается с практиками в парах и общим полем группы. Направление живой работы задаёт то, что происходит прямо сейчас.": "Individual work is interwoven with pair practices and the shared field of the group. What is happening now gives the living work its direction.",
+      "Шаг 01": "Step 01",
+      "Почувствовать": "Feel",
+      "Тело, дыхание, удовольствие и напряжение.": "Body, breath, pleasure, and tension.",
+      "Шаг 02": "Step 02",
+      "Увидеть": "See",
+      "Привычные реакции, защиты и повторения.": "Habitual reactions, defences, and repetitions.",
+      "Шаг 03": "Step 03",
+      "Назвать": "Name",
+      "Правду сердца и слова, которые дают ей форму.": "The truth of the heart and the words that give it form.",
+      "Шаг 04": "Step 04",
+      "Соединить": "Integrate",
+      "Тело, ум, сердце и речь в целое.": "Body, mind, heart, and speech as one whole.",
+      "Ритм полного погружения": "The rhythm of full immersion",
+      "Это не почасовое обещание программы, а честная рамка нагрузки из исходного описания.": "This is not an hour-by-hour promise, but an honest outline of the intensity described by the organisers.",
+      "Начало ежедневной практики": "Daily practice begins",
+      "Днём": "Daytime",
+      "Практические блоки, веганское питание, паузы на восстановление": "Practice blocks, vegan meals, and pauses for recovery",
+      "Вечером": "Evening",
+      "Продолжение практики и групповая работа до позднего времени": "Practice and group work continue until late",
+      "День 1": "Day 1",
+      "Общая встреча в 10:00 — важно уже быть на месте": "Opening meeting at 10:00 — please already be on site",
+      "03 · Важно знать": "03 · Important to know",
+      "Не оставлять границы на уровне догадок": "Do not leave boundaries to guesswork",
+      "Исходная страница подробно описывает философию, но не отвечает на несколько практических вопросов. До полной оплаты их важно проговорить на ознакомительном звонке.": "The original page explains the philosophy in detail, but leaves several practical questions unanswered. It is important to discuss them on the introductory call before making full payment.",
+      "Прикосновения и интимность": "Touch and intimacy",
+      "Какие парные практики предполагают физический контакт? Есть ли нагота или сексуальные техники?": "Which partner practices involve physical contact? Is there nudity or any sexual technique?",
+      "Согласие и отказ": "Consent and refusal",
+      "Можно ли отказаться от упражнения без объяснений, сменить партнёра или выбрать индивидуальный формат?": "Can you decline an exercise without explanation, change partners, or choose an individual format?",
+      "Физическая безопасность": "Physical safety",
+      "Какие есть противопоказания к интенсивному дыханию, длительной нагрузке и другим практикам?": "What are the contraindications for intensive breathwork, prolonged exertion, and other practices?",
+      "Эмоциональная поддержка": "Emotional support",
+      "К кому обратиться при сильной реакции? Как устроены индивидуальная поддержка и конфиденциальность?": "Who can you turn to during a strong reaction? How are individual support and confidentiality handled?",
+      "Первая и вторая ступени": "Levels one and two",
+      "Чем отличаются траектории новых и продолжающих участников внутри объединённой программы 2026 года?": "How do the paths for first-time and returning participants differ within the combined 2026 programme?",
+      "Интеграция после": "Integration afterwards",
+      "Есть ли рекомендации, встреча или группа поддержки после возвращения домой?": "Are there recommendations, a follow-up meeting, or a support group after returning home?",
+      "Редакционное уточнение:": "Editorial note:",
+      "эти ответы нельзя придумывать за команду ретрита. Перед публикацией финальной версии их необходимо заменить официальными правилами Wild Tantra.": "these answers must not be invented on behalf of the retreat team. Before final publication, they should be replaced with the official Wild Tantra guidelines.",
+      "04 · Мастер": "04 · Teacher",
+      "Больше 25 лет Пема следует и передаёт традицию Тантры Каула. На её принципах она создала WildTantra — собственный подход к практике, раскрытый в трёх книгах и ретритах по всему миру.": "For more than 25 years, Pema has followed and transmitted the Kaula Tantra tradition. From its principles she created WildTantra — her own approach, explored in three books and retreats around the world.",
+      "Пема ведёт так же, как говорит о тантре: не сглаживая и не подгоняя живое под готовую форму. В ней соединяются мягкость и сила, любовь и острота, глубина и дикость.": "Pema facilitates in the same way she speaks about tantra: without smoothing things over or forcing what is alive into a ready-made form. She brings together softness and strength, love and sharpness, depth and wildness.",
+      "«Тантра — цветок: её аромат — любовь, её форма — сознание».": "“Tantra is a flower: its fragrance is love, its form is consciousness.”",
+      "05 · Пространство": "05 · Venue",
+      "Историческая усадьба в сосновом лесу, в получасе от Лиссабона и океана — место для глубокой работы и бережного восстановления.": "A historic estate in a pine forest, half an hour from Lisbon and the ocean — a place for deep work and gentle recovery.",
+      "Природа, тишина и пространство для восстановления": "Nature, quiet, and room to recover",
+      "Светлый зал для практики, паровой купол, ледяная ванна, террасы, бассейн и комнаты. Каждый день — специальное веганское меню от шефов DOMA, разработанное вместе с Пемой под ритм недели.": "A light-filled practice hall, steam dome, ice bath, terraces, pool, and guest rooms. Each day features a special vegan menu by the DOMA chefs, developed with Pema for the rhythm of the week.",
+      "Открыть сайт DOMA ↗": "Visit the DOMA website ↗",
+      "06 · Отзывы": "06 · Stories",
+      "Опыт, который трудно уместить в слова": "An experience that is hard to put into words",
+      "«Я пару раз плакал от одной только мысли, что со мной этот опыт мог бы не случиться. Сначала тебя родили, а потом ещё нужно самому почувствовать себя по-настоящему живым».": "“A few times I cried at the thought that this experience might never have happened to me. First you are born — and then you still have to feel truly alive for yourself.”",
+      "Егор Руди": "Egor Rudi",
+      "Читать полностью ↗": "Read the full story ↗",
+      "«Насколько ты можешь развернуть в себе боль, настолько же и сила любви вырастет во все измерения над ним».": "“The more fully you can unfold pain within yourself, the more the power of love can grow beyond it in every dimension.”",
+      "Оля Маркес": "Olya Markes",
+      "«Это было про встречу с Мастером. Сразу стало понятно, какой огромный масштаб держит Пема. Даже во взрослом возрасте можно создать близкие и глубокие отношения».": "“It was about meeting a Teacher. It immediately became clear how vast the space Pema can hold. Even in adulthood, it is possible to create close and profound relationships.”",
+      "Алексей Иванов": "Alexey Ivanov",
+      "«Я вернулась домой — к мудрости моего тела, которое всё знало, а я забыла. Давно в моей жизни не было такой ясности, как та, которую я получаю в тантре».": "“I came home — to the wisdom of my body, which knew everything while I had forgotten. It has been a long time since I felt the clarity that tantra gives me.”",
+      "Лена Дегтярь": "Lena Degtyar",
+      "«Один из самых впечатляющих и глубоких опытов. Исследование взаимодействия, энергии, чувственности, телесности и включённости в момент».": "“One of the most striking and profound experiences: an exploration of interaction, energy, sensuality, embodiment, and being fully present.”",
+      "Вера Мусаелян": "Vera Musaelyan",
+      "Участница Wild Tantra": "Wild Tantra participant",
+      "07 · Слушать": "07 · Listen",
+      "Больше о тантре — в разговорах": "More about tantra — in conversation",
+      "Пема, участники и ведущие VAHUE говорят о том, что происходит на практике и зачем люди возвращаются.": "Pema, participants, and VAHUE hosts talk about what happens in the practice and why people return.",
+      "Разговор": "Conversation",
+      "Оля Маркес и Дима Мацкевич — с Пемой Гитамой": "Olya Markes and Dima Matskevich with Pema Gitama",
+      "После ретрита": "After the retreat",
+      "Егор Руди и Дима Мацкевич — сразу после Wild Tantra 2025": "Egor Rudi and Dima Matskevich — immediately after Wild Tantra 2025",
+      "Интервью": "Interview",
+      "Саша Барсуков — зачем мужчине отношения и зачем ехать на тантру": "Sasha Barsukov — why men need relationships and why come to tantra",
+      "Короткий разговор": "Short conversation",
+      "Макс Чижов — энергия, намерение и практика тантры": "Max Chizhov — energy, intention, and tantric practice",
+      "Эфир Лены Дегтярь и Оли Маркес после Wild Tantra 2024 ↗": "Lena Degtyar and Olya Markes live after Wild Tantra 2024 ↗",
+      "08 · Стоимость": "08 · Price",
+      "Участие": "Participation",
+      "Участие в ретрите": "Retreat participation",
+      "Вы уже не первый ретрит с нами? Для своих есть спецусловия.": "Is this not your first retreat with us? Special terms are available for returning participants.",
+      "Для тех, кто уже был на тантре с Пемой": "For those who have already attended tantra with Pema",
+      "Место бронируется после полной предоплаты. Проживание, дорога до Португалии и трансферы в стоимость не входят.": "Your place is reserved after full prepayment. Accommodation, travel to Portugal, and transfers are not included.",
+      "Как присоединиться": "How to join",
+      "Заполнить короткую форму": "Complete a short form",
+      "Расскажите немного о себе и своём намерении.": "Tell us a little about yourself and your intention.",
+      "Пройти ознакомительный звонок": "Have an introductory call",
+      "Команда расскажет о процессе, ответит на вопросы и вместе с вами поймёт, подходит ли этот опыт сейчас.": "The team will explain the process, answer your questions, and explore with you whether this experience is right for you now.",
+      "Получить подтверждение": "Receive confirmation",
+      "Все заявки сначала попадают в вейтлист. Место закрепляется после решения команды и полной оплаты.": "All applications first go to a waiting list. Your place is confirmed after the team’s decision and full payment.",
+      "Организаторы отмечают, что мужчинам часто сложнее сделать первый шаг. Поэтому при рассмотрении женских заявок преимущество будет у тех, кто хочет приехать с мужчиной +1 — это может быть партнёр, друг или близкий человек.": "The organisers note that men often find it harder to take the first step. For this reason, priority among women’s applications will be given to those who wish to attend with a male +1 — a partner, friend, or someone close.",
+      "09 · Вопросы": "09 · Questions",
+      "Перед тем как решиться": "Before you decide",
+      "То, что уже можно понять из программы — и то, что необходимо уточнить лично.": "What the programme already makes clear — and what should be confirmed personally.",
+      "Тантра — это обязательно про секс?": "Is tantra necessarily about sex?",
+      "Нет, тантра значительно шире сексуальных практик. В описании Wild Tantra основной фокус — присутствие, тело, дыхание, эмоции, сердце и речь. При этом точный формат интимных или контактных практик в исходном тексте не указан: его необходимо прояснить на звонке до оплаты.": "No. Tantra is much broader than sexual practice. Wild Tantra focuses on presence, body, breath, emotions, heart, and speech. The original text does not specify the exact format of intimate or contact practices, so this should be clarified on the call before payment.",
+      "Нужен ли предыдущий опыт?": "Is previous experience required?",
+      "В 2026 году программа объединяет первую и вторую ступени: для тех, кто приезжает впервые, и для продолжающих. Конкретное различие траекторий стоит уточнить у команды.": "In 2026, the programme combines levels one and two for first-time and returning participants. Ask the team to clarify the exact difference between these paths.",
+      "Насколько интенсивен ретрит?": "How intensive is the retreat?",
+      "Это семь дней полного погружения. Каждый день начинается в 7:00 и продолжается до позднего вечера. В первый день общая встреча начинается в 10:00.": "This is seven days of full immersion. Each day begins at 7:00 and continues until late evening. On the first day, the opening meeting begins at 10:00.",
+      "Как устроены питание и проживание?": "How do food and accommodation work?",
+      "На протяжении недели предусмотрено специальное веганское меню от шефов DOMA, разработанное вместе с Пемой. Проживание оплачивается отдельно; варианты комнат и точную стоимость важно запросить у организаторов.": "A special vegan menu by the DOMA chefs, developed with Pema, is provided throughout the week. Accommodation is paid separately; ask the organisers about room options and exact prices.",
+      "Что не входит в стоимость?": "What is not included in the price?",
+      "Проживание, перелёт или другая дорога до Португалии, а также трансферы не входят в стоимость участия.": "Accommodation, flights or other travel to Portugal, and transfers are not included in the participation fee.",
+      "Можно ли общаться на русском?": "Can I participate in Russian?",
+      "Рабочий язык ретрита — английский, переводчик не предусмотрен.": "The working language of the retreat is English. Interpretation is not provided.",
+      "Если тело уже говорит «да»": "If your body is already saying yes",
+      "По ссылке — короткая форма. После неё команда напишет и договорится о звонке, чтобы познакомиться, обсудить детали и вместе понять, подходит ли вам этот опыт.": "The link opens a short form. Afterwards, the team will contact you to arrange a call, meet you, discuss the details, and decide together whether this experience is right for you.",
+      "Оставить заявку ↗": "Apply ↗",
+      "Заявка не равна автоматическому бронированию места.": "An application does not automatically reserve a place.",
+      "Wild Tantra · Пема Гитама · VAHUE": "Wild Tantra · Pema Gitama · VAHUE",
+      "Публичная оферта": "Public offer",
+      "Политика конфиденциальности": "Privacy policy"
+    };
+    const englishAttributes = {
+      "Wild Tantra с Пемой Гитамой, 5–11 октября, Португалия": "Wild Tantra with Pema Gitama, 5–11 October, Portugal",
+      "Пема Гитама": "Pema Gitama",
+      "Цитата Пемы Гитамы о тантре и её работе": "A quote from Pema Gitama about tantra and her work",
+      "Историческая усадьба DOMA Portugal": "The historic DOMA Portugal estate",
+      "Дорога через лес к усадьбе DOMA": "The forest road to the DOMA estate",
+      "Бассейн и территория DOMA": "The pool and grounds at DOMA",
+      "Комната для проживания в DOMA": "A guest room at DOMA",
+      "Ванная комната с видом на лес": "A bathroom overlooking the forest",
+      "Спа-зона и ледяная ванна": "The spa area and ice bath",
+      "Превью подкаста с Пемой Гитамой": "Podcast preview with Pema Gitama",
+      "Превью разговора после Wild Tantra 2025": "Conversation after Wild Tantra 2025 preview",
+      "Превью интервью с Сашей Барсуковым": "Sasha Barsukov interview preview",
+      "Превью интервью с Максом Чижовым": "Max Chizhov interview preview",
+      "Смотреть подкаст Оли Маркес и Димы Мацкевича с Пемой Гитамой на YouTube": "Watch Olya Markes and Dima Matskevich with Pema Gitama on YouTube",
+      "Смотреть разговор после Wild Tantra 2025 на YouTube": "Watch the conversation after Wild Tantra 2025 on YouTube",
+      "Смотреть интервью с Сашей Барсуковым на YouTube": "Watch the Sasha Barsukov interview on YouTube",
+      "Смотреть интервью с Максом Чижовым на YouTube": "Watch the Max Chizhov interview on YouTube",
+      "Открыть меню": "Open menu"
+    };
+
+    const translateTextNodes = () => {
+      const walker = document.createTreeWalker(document.body, NodeFilter.SHOW_TEXT);
+      let node;
+      while ((node = walker.nextNode())) {
+        const original = node.nodeValue;
+        const trimmed = original.trim();
+        if (!trimmed || !englishText[trimmed]) continue;
+        node.nodeValue = original.replace(trimmed, englishText[trimmed]);
+      }
+    };
+
+    if (pageLanguage === 'en') {
+      document.documentElement.lang = 'en';
+      document.title = 'Wild Tantra · Pema Gitama · 5–11 October 2026';
+      const description = document.querySelector('meta[name="description"]');
+      if (description) description.content = 'Wild Tantra with Pema Gitama — seven days of presence, body, heart, and speech in Portugal, 5–11 October 2026.';
+      translateTextNodes();
+      document.querySelectorAll('[alt], [aria-label]').forEach((element) => {
+        ['alt', 'aria-label'].forEach((attribute) => {
+          const value = element.getAttribute(attribute);
+          if (value && englishAttributes[value]) element.setAttribute(attribute, englishAttributes[value]);
+        });
+      });
+      document.querySelector('.language-switch')?.setAttribute('aria-label', 'Page language');
+      document.querySelector('.site-header nav')?.setAttribute('aria-label', 'Main navigation');
+      document.querySelector('.brand')?.setAttribute('aria-label', 'Wild Tantra — back to top');
+      document.querySelector('.hero-side')?.setAttribute('aria-label', 'Retreat details');
+      document.querySelector('.principle-grid')?.setAttribute('aria-label', 'Three Wild Tantra principles');
+      document.querySelector('.journey')?.setAttribute('aria-label', 'The practice journey');
+      document.querySelector('.gallery')?.setAttribute('aria-label', 'DOMA Portugal photographs');
+      document.querySelector('.portrait-strip')?.setAttribute('aria-label', 'Participants and testimonial authors');
+    }
+
+    document.querySelectorAll('.language-switch button').forEach((button) => {
+      button.setAttribute('aria-pressed', String(button.dataset.lang === pageLanguage));
+    });
+
+    const editToggle = document.querySelector('.edit-toggle');
+    const saveStatus = document.querySelector('.save-status');
+    const editStorageKey = `wild-tantra-page-edits-v2-${pageLanguage}`;
+    const editableSelector = [
+      'main h1', 'main h2', 'main h3', 'main p', 'main dt', 'main dd',
+      'main small', 'main .section-number', 'main .principle-index',
+      'main .method > span', 'main .journey-step > small',
+      'main .rhythm-item > strong', 'main .rhythm-item > span', 'main .check-item > strong',
+      'main .price-row > span', 'main .price-row > strong',
+      'main .returning-price summary span', 'main .returning-price-body span',
+      'main .returning-price-body strong', 'main .faq-question span:first-child',
+      'main .hero-actions > a', 'main .venue-card > a', 'main .testimonial footer > *',
+      'main .podcast-copy small', 'main .text-link', '.site-footer > span', '.footer-links a'
+    ].join(',');
+    const editableNodes = [...document.querySelectorAll(editableSelector)];
+    const editorText = pageLanguage === 'en'
+      ? { ready: 'Editable', editing: 'Click any text', edit: '✎ Edit', done: '✓ Done', saving: 'Saving…', saved: 'Saved on this device', failed: 'Could not save' }
+      : { ready: 'Можно редактировать', editing: 'Кликните по любому тексту', edit: '✎ Править', done: '✓ Готово', saving: 'Сохраняю…', saved: 'Сохранено на этом устройстве', failed: 'Не удалось сохранить' };
+    let storedEdits = {};
+    let saveTimer;
+
+    try {
+      storedEdits = JSON.parse(localStorage.getItem(editStorageKey) || '{}');
+    } catch (error) {
+      storedEdits = {};
+    }
+
+    editableNodes.forEach((node, index) => {
+      const key = `text-${index}`;
+      node.dataset.editKey = key;
+      if (Object.prototype.hasOwnProperty.call(storedEdits, key)) node.innerHTML = storedEdits[key];
+    });
+
+    const saveEdits = () => {
+      const nextEdits = {};
+      editableNodes.forEach((node) => { nextEdits[node.dataset.editKey] = node.innerHTML; });
+      try {
+        localStorage.setItem(editStorageKey, JSON.stringify(nextEdits));
+        saveStatus.textContent = editorText.saved;
+      } catch (error) {
+        saveStatus.textContent = editorText.failed;
+      }
+    };
+
+    const setEditMode = (enabled) => {
+      document.body.classList.toggle('editing', enabled);
+      editToggle.setAttribute('aria-pressed', String(enabled));
+      editToggle.textContent = enabled ? editorText.done : editorText.edit;
+      saveStatus.textContent = enabled ? editorText.editing : editorText.ready;
+      editableNodes.forEach((node) => {
+        if (enabled) node.setAttribute('contenteditable', 'true');
+        else node.removeAttribute('contenteditable');
+      });
+      if (!enabled) saveEdits();
+    };
+
+    editToggle.addEventListener('click', () => {
+      setEditMode(editToggle.getAttribute('aria-pressed') !== 'true');
+    });
+
+    document.addEventListener('input', (event) => {
+      if (!event.target.closest('[contenteditable="true"]')) return;
+      saveStatus.textContent = editorText.saving;
+      clearTimeout(saveTimer);
+      saveTimer = setTimeout(saveEdits, 450);
+    });
+
+    document.addEventListener('click', (event) => {
+      if (!document.body.classList.contains('editing')) return;
+      if (event.target.closest('a')) event.preventDefault();
+      if (event.target.closest('summary')) event.preventDefault();
+    }, true);
+
+    window.addEventListener('beforeunload', () => {
+      if (document.body.classList.contains('editing')) saveEdits();
+    });
+
+    document.querySelectorAll('.language-switch button').forEach((button) => {
+      button.addEventListener('click', () => {
+        const nextLanguage = button.dataset.lang;
+        if (nextLanguage === pageLanguage) return;
+        if (document.body.classList.contains('editing')) saveEdits();
+        const nextUrl = new URL(window.location.href);
+        nextUrl.searchParams.set('lang', nextLanguage);
+        nextUrl.hash = window.location.hash;
+        window.location.href = nextUrl.toString();
+      });
+    });
+
+    const navAnchors = [...document.querySelectorAll('.nav-links a[href^="#"]')];
+    const observedSections = navAnchors.map(link => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        navAnchors.forEach(link => link.removeAttribute('aria-current'));
+        const active = navAnchors.find(link => link.getAttribute('href') === `#${entry.target.id}`);
+        if (active) active.setAttribute('aria-current', 'true');
+      });
+    }, { rootMargin: '-25% 0px -65% 0px' });
+    observedSections.forEach(section => observer.observe(section));
+  </script>
+</body>
+</html>
