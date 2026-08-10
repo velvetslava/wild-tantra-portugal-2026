@@ -1,0 +1,4 @@
+.DS_Store
+
+# Raw handoff files stay local; the selected and optimised assets live in /assets.
+incoming/
