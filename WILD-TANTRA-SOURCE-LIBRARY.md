@@ -187,12 +187,27 @@ WildTantra — путь пробуждения в традиции Tantra Kaula.
 | `Kundalini Flow` | официальное название этапа/ретрита | [WildTantra Retreats](https://wildtantra.com/retreats/) | Поток Кундалини |
 | `Love and Awareness` | подтверждённая смысловая пара | [Vol. I](https://www.pemagitama.com/tantra-the-whispering-transmission) | Любовь и осознанность |
 | `Gratitude` | повторяющаяся тема и часть описания практики | [WildTantra Retreats](https://wildtantra.com/retreats/) | Благодарность |
+| `It is a matter of how we channel it.` | короткая дословная цитата о жизненной энергии | [WildTantra — New Year, New Retreat](https://wildtantra.com/new-year-new-retreat/) | Вопрос в том, куда мы её направляем. |
 | `The Call` | название главы | [Vol. I sample](https://www.pemagitama.com/_files/ugd/b8a3e2_ffc8eb3e21c54f9ea2fc6d320de2c15f.pdf) | Зов |
 | `Remember and Listen` | название главы | [Vol. II sample](https://www.pemagitama.com/_files/ugd/b8a3e2_dca4aca815f44714afd337a12e4d1bad.pdf) | Вспомнить и слушать |
 | `The Inner Flame` | название метода | [Vol. III sample](https://www.pemagitama.com/_files/ugd/b8a3e2_ebb94b8b0687453cb5abb844e0ebd9b2.pdf) | Внутреннее пламя |
 | `The Heart Thread` | официальный образ группы методов | [Vol. III sample](https://www.pemagitama.com/_files/ugd/b8a3e2_ebb94b8b0687453cb5abb844e0ebd9b2.pdf) | Нить Сердца |
 
 Русские варианты в таблице — рабочие переводы команды, а не официальные русские названия.
+
+## Голос Пемы перед mood-видео
+
+Для редакционного интерлюда перед видео используем три короткие цитаты — по одной из каждого тома. Английский оригинал сохраняется на странице, русский текст всегда обозначается как рабочий перевод команды.
+
+| Оригинал | Рабочий перевод | Источник |
+| --- | --- | --- |
+| `The flower of Tantra has the fragrance of love and the shape of consciousness.` | Аромат тантры — любовь, а её форма — сознание. | [The Whispering Transmission · Vol. I](https://www.pemagitama.com/tantra-the-whispering-transmission) |
+| `It is an art to participate in the flow of life without identifying with it.` | Быть в потоке жизни, не отождествляясь с ним, — искусство. | [The Hidden Mysteries · Vol. II](https://www.pemagitama.com/tantra-the-hidden-mysteries) |
+| `Mystery is not a word or a concept. It is a space.` | Тайна — не слово и не концепция. Это пространство. | [The Path of Awakening · Vol. III](https://www.pemagitama.com/tantra-the-path-of-awakening) |
+
+На странице [WildTantra Retreats](https://wildtantra.com/retreats/) Пема формулирует вопросы, с которыми участник входит в практику. Для лендинга выбраны два коротких оригинала: `Who am I?` и `Am I willing to be absorbed by Love?` Это не FAQ с готовыми ответами, а self-inquiry — вопросы для непосредственного исследования.
+
+На официальной странице [WildTantra Media](https://wildtantra.com/media/) собраны видео, в которых Пема отвечает на вопросы о направлении учения, любви, телесном и энергетическом измерении близости, мужской и женской полярности. С лендинга ведём на эту подборку одной спокойной текстовой ссылкой; не пересказываем ответы без точной расшифровки.
 
 ## Разрешённые редакционные заголовки
 
@@ -201,9 +216,12 @@ WildTantra — путь пробуждения в традиции Tantra Kaula.
 | Заголовок | Опора | Статус |
 | --- | --- | --- |
 | **Проснуться. Осознавать.** | `Awake — Aware` | максимально близко к официальному названию |
+| **AWAKE · AWARE · ALIVE** | `Awake — Aware` и `Aliveness` в описании Path of Awakening | редакционная композиция из официального словаря, не цитата |
+| **Вернуться к жизни всем собой** / **Come alive — with all that you are** | `Aliveness`, `Vital Body`, целостность тела, Сердца и ума | утверждённая редакционная фраза проекта, не цитата Пемы |
 | **Путь пробуждения** | название третьей книги и программы | официальный термин |
 | **Любовь и осознанность** | центральная пара первого тома | редакционный перевод смысла |
 | **Жизненная энергия** | `Life Energy` в описании программы | официальный термин |
+| **Жизненная энергия — к любви и осознанности** | `Life Energy`, `Love`, `Awareness` | редакционная связка официальных понятий, не цитата |
 | **Сказать жизни «да»** | приглашение из вступления первого тома | близкий пересказ, не цитата |
 | **Вспомнить и слушать** | `Remember and Listen` | рабочий перевод названия главы |
 | **Внутреннее пламя** | `The Inner Flame` | рабочий перевод названия метода |
@@ -257,4 +275,5 @@ WildTantra — путь пробуждения в традиции Tantra Kaula.
 - [WildTantra — Retreats](https://wildtantra.com/retreats/)
 - [WildTantra — Awake — Aware](https://wildtantra.com/events/54216/)
 - [WildTantra — Wake Up](https://wildtantra.com/wake-up/)
+- [WildTantra — New Year, New Retreat](https://wildtantra.com/new-year-new-retreat/)
 - [WildTantra — Media](https://wildtantra.com/media/)
