@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wild Tantra Portugal 2026 · Carousel v3 vibe</title>
+  <style>
+    @font-face { font-family: Onest; src: url("assets/onest-400.ttf") format("truetype"); font-weight: 400; }
+    @font-face { font-family: Onest; src: url("assets/onest-600.ttf") format("truetype"); font-weight: 600; }
+
+    :root {
+      --night: #171416;
+      --powder: #d996b5;
+      --powder-soft: #efd1df;
+      --paper: #f3f0e7;
+      --white: #fffdf9;
+      --olive: #747a67;
+      --olive-deep: #555b4c;
+      --ink-soft: #625c5f;
+      --line-dark: rgba(23, 20, 22, .22);
+      --line-light: rgba(255, 253, 249, .25);
+      --p-density: 1;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { margin: 0; background: #0b090a; }
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 26px;
+      padding: 26px;
+      color: var(--night);
+      font-family: Onest, Arial, sans-serif;
+    }
+
+    .slide {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      isolation: isolate;
+      background: var(--paper);
+    }
+    .slide::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 30;
+      pointer-events: none;
+      box-shadow: inset 0 0 0 1px rgba(23, 20, 22, .07);
+    }
+
+    .page {
+      position: relative;
+      z-index: 4;
+      height: 100%;
+      padding: 50px 58px 52px;
+      display: flex;
+      flex-direction: column;
+    }
+    .rail {
+      position: relative;
+      z-index: 8;
+      min-height: 43px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 1px solid var(--line-dark);
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 600;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .rail-light { color: var(--white); border-color: var(--line-light); }
+    .rail .brand { letter-spacing: .04em; }
+    .rail .folio { font-variant-numeric: tabular-nums; }
+
+    h1, h2, h3, p, blockquote { margin: 0; }
+    h1, h2, h3 { font-weight: 600; letter-spacing: -.03em; }
+    h1 { font-size: 76px; line-height: .96; }
+    h2 { font-size: 48px; line-height: 1.08; }
+    h3 { font-size: 32px; line-height: 1.18; }
+    p { font-size: 30px; line-height: 1.42; letter-spacing: -.012em; }
+    .small { font-size: 23px; line-height: 1.4; }
+    .muted { color: var(--ink-soft); }
+    .pink { color: var(--powder); }
+
+    /* 01 — cover */
+    .s1 { background: var(--night); color: var(--white); }
+    .s1 .cover-photo { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; filter: grayscale(1) contrast(1.18) brightness(.52); }
+    .s1 .cover-photo-shade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(23,20,22,.08), rgba(23,20,22,.64)); }
+    .s1 .page { z-index: 2; }
+    .s1 .rail { color: rgba(255,253,249,.82); border-color: rgba(255,253,249,.82); }
+    .s1 h1 { position: absolute; z-index: 4; left: 48px; right: 48px; top: 214px; font-family: "Avenir Next", Onest, sans-serif; font-size: 176px; line-height: .79; font-weight: 700; letter-spacing: -.04em; text-transform: uppercase; color: var(--powder); }
+    .s1 h1 span { display: block; }
+    .s1 .master { position: absolute; z-index: 4; left: 58px; top: 580px; font-size: 40px; line-height: 1.15; font-weight: 600; letter-spacing: -.02em; }
+    .s1 .date-focus { position: absolute; z-index: 4; left: 58px; top: 652px; font-size: 42px; line-height: 1.08; font-weight: 600; letter-spacing: -.025em; color: var(--powder-soft); }
+    .s1 .lede { position: absolute; z-index: 4; left: 58px; bottom: 196px; width: 620px; font-size: 28px; line-height: 1.4; letter-spacing: -.012em; color: rgba(255,253,249,.82); }
+    .s1 .cover-meta { position: absolute; z-index: 4; left: 58px; right: 58px; bottom: 58px; display: flex; justify-content: flex-end; align-items: flex-end; padding-top: 23px; border-top: 1px solid rgba(255,253,249,.38); }
+    .s1 .cover-meta span { color: rgba(255,253,249,.7); font-size: 22px; line-height: 1.25; text-align: right; }
+
+    /* 02 — essence */
+    .s2 { background: var(--white); }
+    .s2 .page { padding-right: 0; }
+    .s2 .rail { margin-right: 58px; }
+    .s2 .essence-grid { flex: 1; display: grid; grid-template-columns: 61% 39%; min-height: 0; }
+    .s2 .essence-copy { padding: 66px 56px 46px 0; display: flex; flex-direction: column; }
+    .s2 h2 { max-width: 570px; }
+    .s2 .body-copy { margin-top: 43px; max-width: 590px; }
+    .s2 .body-copy p + p { margin-top: 26px; }
+    .s2 .statement { margin-top: auto; padding-top: 32px; border-top: 2px solid var(--night); color: #ad557d; font-size: 34px; line-height: 1.3; font-weight: 600; }
+    .s2 .ocean-panel { margin-top: 34px; position: relative; overflow: hidden; }
+    .s2 .ocean-panel img { width: 100%; height: 100%; object-fit: cover; object-position: 52% center; filter: grayscale(1) contrast(1.12); }
+    .s2 .ocean-caption { position: absolute; left: 24px; bottom: 24px; right: 24px; color: var(--white); font-size: 21px; line-height: 1.35; }
+
+    /* 03 — energy */
+    .s3 { background: var(--powder-soft); }
+    .s3 .energy-head { margin-top: 55px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+    .s3 .energy-head p { font-size: 28px; line-height: 1.44; }
+    .s3 .energy-head strong { color: #8f3f65; }
+    .s3 .artifacts { flex: 1; min-height: 0; margin-top: 46px; display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+    .s3 figure { margin: 0; display: grid; grid-template-rows: 1fr auto; min-height: 0; }
+    .s3 .image-bed { min-height: 0; display: flex; align-items: center; justify-content: center; overflow: hidden; background: #cbd0ad; }
+    .s3 figure:nth-child(2) .image-bed { background: #cbd0ad; }
+    .s3 img { width: 100%; height: 100%; object-fit: contain; }
+    .s3 figcaption { min-height: 97px; padding: 22px 24px 0; font-size: 24px; line-height: 1.35; }
+    .s3 .quote { margin: 18px 0 0 auto; max-width: 655px; padding-top: 20px; border-top: 1px solid rgba(23,20,22,.25); font-size: 28px; line-height: 1.32; font-weight: 600; text-align: right; }
+
+    /* 04 — practice */
+    .s4 { background: var(--night); color: var(--white); }
+    .s4 .practice-image { height: 315px; margin: 32px -58px 0; overflow: hidden; }
+    .s4 .practice-image img { width: 100%; height: 100%; object-fit: cover; object-position: center 48%; filter: grayscale(1) contrast(1.18) brightness(.82); }
+    .s4 .practice-copy { flex: 1; min-height: 0; padding-top: 39px; display: grid; grid-template-columns: .9fr 1.1fr; gap: 54px; }
+    .s4 h2 { color: var(--powder); }
+    .s4 .method-intro { margin-top: 28px; color: #d8d0d3; font-size: 27px; }
+    .s4 .sequence { margin-top: 36px; color: var(--powder); font-size: 28px; line-height: 1.5; font-weight: 600; }
+    .s4 .practice-flow { display: flex; flex-direction: column; justify-content: space-between; }
+    .s4 .practice-flow p { font-size: 28px; line-height: 1.42; color: #eee9eb; }
+    .s4 .practice-flow p + p { margin-top: 24px; }
+    .s4 .practice-flow .contact-note { margin-top: 31px; padding: 25px 28px; background: var(--powder); color: var(--night); font-size: 26px; line-height: 1.38; }
+
+    /* 05 — Pema */
+    .s5 { background: var(--white); }
+    .s5 .portrait { position: absolute; inset: 0 54% 0 0; width: 46%; height: 100%; object-fit: cover; object-position: 48% center; filter: grayscale(1) contrast(1.05); }
+    .s5 .page { padding-left: 544px; }
+    .s5 .pema-copy { flex: 1; padding: 64px 0 0; display: flex; flex-direction: column; }
+    .s5 h2 { font-size: 46px; }
+    .s5 .pema-copy > p { margin-top: 34px; font-size: 28px; line-height: 1.44; }
+    .s5 .quote-field { margin-top: auto; margin-right: -58px; padding: 34px 50px 38px 36px; background: var(--powder); }
+    .s5 .quote-field p { font-size: 31px; line-height: 1.32; font-weight: 600; }
+    .s5 .quote-field span { display: block; margin-top: 16px; font-size: 21px; letter-spacing: .06em; text-transform: uppercase; }
+
+    /* 06 — rhythm */
+    .s6 { background: var(--night); color: var(--white); }
+    .s6 .rhythm-grid { flex: 1; min-height: 0; display: grid; grid-template-columns: 36% 64%; }
+    .s6 .rhythm-photo { margin: 30px 0 0 -58px; position: relative; overflow: hidden; }
+    .s6 .rhythm-photo img { width: 100%; height: 100%; object-fit: cover; object-position: 50% center; filter: grayscale(1) contrast(1.14) brightness(.78); }
+    .s6 .rhythm-photo::after { content: ""; position: absolute; inset: 0; background: linear-gradient(180deg, transparent, rgba(23,20,22,.5)); }
+    .s6 .rhythm-copy { padding: 49px 0 0 43px; display: flex; flex-direction: column; }
+    .s6 h2 { color: var(--powder); }
+    .s6 .slots { margin-top: 36px; display: grid; gap: 26px; }
+    .s6 .slot { display: grid; grid-template-columns: 132px 1fr; gap: 22px; align-items: start; }
+    .s6 .slot strong { color: var(--powder-soft); font-size: 30px; line-height: 1.15; }
+    .s6 .slot p { font-size: 28px; line-height: 1.35; color: #e8e1e4; }
+    .s6 .intensity { margin-top: auto; padding: 26px 0 0; border-top: 1px solid var(--line-light); font-size: 26px; line-height: 1.4; color: #cfc7ca; }
+
+    /* 07 — VAHUE */
+    .s7 { background: var(--olive); color: var(--white); }
+    .s7 .flower { position: absolute; right: -165px; bottom: -40px; z-index: 0; width: 690px; height: 690px; object-fit: contain; opacity: .42; filter: saturate(.55); mix-blend-mode: screen; }
+    .s7 .page { z-index: 2; }
+    .s7 .vahue-copy { flex: 1; padding: 65px 0 0; display: flex; flex-direction: column; max-width: 850px; }
+    .s7 .joint { display: inline-flex; width: fit-content; align-items: center; gap: 16px; color: var(--powder-soft); font-size: 27px; font-weight: 600; }
+    .s7 .joint span { font-size: 34px; }
+    .s7 h2 { margin-top: 22px; max-width: 770px; }
+    .s7 .vahue-columns { margin-top: 50px; display: grid; grid-template-columns: 1fr 1fr; gap: 48px; }
+    .s7 .vahue-columns p { font-size: 29px; line-height: 1.45; color: #f1f1ea; }
+    .s7 .levels { margin-top: auto; max-width: 800px; padding: 30px 34px; background: var(--olive-deep); }
+    .s7 .levels strong { display: block; color: var(--powder-soft); font-size: 24px; }
+    .s7 .levels p { margin-top: 12px; font-size: 28px; line-height: 1.38; }
+
+    /* 08 — Egor */
+    .s8 { background: var(--powder); }
+    .s8 .person-photo { position: absolute; inset: 0 56% 0 0; width: 44%; height: 100%; object-fit: cover; object-position: 50% center; filter: grayscale(1) contrast(1.08); }
+    .s8 .person-tint { position: absolute; inset: 0 56% 0 0; z-index: 1; background: rgba(217,150,181,.28); mix-blend-mode: color; }
+    .s8 .page { z-index: 2; padding-left: 526px; }
+    .s8 .testimonial-copy { flex: 1; padding: 82px 0 0; display: flex; flex-direction: column; }
+    .s8 blockquote { max-width: 480px; font-size: 41px; line-height: 1.28; font-weight: 600; letter-spacing: -.025em; }
+    .s8 .person { margin-top: auto; padding-top: 28px; border-top: 1px solid rgba(23,20,22,.34); }
+    .s8 .person strong { display: block; font-size: 27px; }
+    .s8 .person span { display: block; margin-top: 9px; color: #613d4d; font-size: 20px; line-height: 1.35; }
+
+    /* 09 — Lena */
+    .s9 { background: var(--powder-soft); }
+    .s9 .person-photo { position: absolute; inset: 0 0 0 52%; width: 48%; height: 100%; object-fit: cover; object-position: 57% center; filter: grayscale(1) contrast(1.06); }
+    .s9 .page { z-index: 2; padding-right: 560px; }
+    .s9 .testimonial-copy { flex: 1; padding: 76px 0 0; display: flex; flex-direction: column; }
+    .s9 blockquote { max-width: 450px; font-size: 39px; line-height: 1.3; font-weight: 600; letter-spacing: -.024em; color: #753650; }
+    .s9 .person { margin-top: auto; padding-top: 28px; border-top: 1px solid rgba(23,20,22,.28); }
+    .s9 .person strong { display: block; font-size: 27px; }
+    .s9 .person span { display: block; margin-top: 9px; color: var(--ink-soft); font-size: 20px; line-height: 1.35; }
+
+    /* 10 — place */
+    .s10 { background: var(--paper); }
+    .s10 .place-collage { height: 720px; margin: 32px -58px 0; display: grid; grid-template-columns: 1.28fr .72fr; gap: 9px; }
+    .s10 .place-collage > img { width: 100%; height: 720px; object-fit: cover; filter: saturate(.78); }
+    .s10 .place-side { display: grid; grid-template-rows: 1fr 1fr; gap: 9px; }
+    .s10 .place-side img { width: 100%; height: 355px; object-fit: cover; filter: saturate(.78); }
+    .s10 .place-copy { flex: 1; padding-top: 36px; display: grid; grid-template-columns: .92fr 1.08fr; gap: 51px; align-content: start; }
+    .s10 h2 { font-size: 44px; }
+    .s10 .place-copy p { font-size: 28px; line-height: 1.4; color: var(--ink-soft); }
+    .s10 .amenities { margin-top: 21px; font-size: 22px; line-height: 1.45; font-weight: 600; color: var(--olive-deep); }
+
+    /* 11 — restoration */
+    .s11 { background: var(--olive); color: var(--white); }
+    .s11 .room-photo { position: absolute; inset: 0 54% 0 0; width: 46%; height: 100%; object-fit: cover; object-position: center; filter: saturate(.66) contrast(1.03); }
+    .s11 .page { z-index: 2; padding-left: 544px; }
+    .s11 .rest-copy { flex: 1; padding-top: 66px; display: flex; flex-direction: column; }
+    .s11 h2 { max-width: 470px; color: var(--powder-soft); }
+    .s11 .rest-copy > p { margin-top: 39px; font-size: 30px; line-height: 1.44; color: #f1f1ea; }
+    .s11 .rest-list { margin-top: auto; padding: 29px 32px; background: var(--olive-deep); color: var(--white); font-size: 25px; line-height: 1.45; }
+
+    /* 12 — CTA */
+    .s12 { background: var(--night); color: var(--night); }
+    .s12 .venue-bg { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; filter: saturate(.75) contrast(1.04) brightness(.78); }
+    .s12 .venue-shade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(23,20,22,.15), rgba(23,20,22,.72)); }
+    .s12 .page { z-index: 2; }
+    .s12 .cta-panel { width: 68%; height: calc(100% - 66px); margin-top: 31px; padding: 45px 46px 40px; background: rgba(217,150,181,.96); display: flex; flex-direction: column; }
+    .s12 h2 { max-width: 570px; font-size: 51px; }
+    .s12 .facts { margin-top: 35px; display: grid; gap: 15px; }
+    .s12 .facts p { font-size: 28px; line-height: 1.34; }
+    .s12 .facts strong { font-weight: 600; }
+    .s12 .call-note { margin-top: 31px; padding-top: 25px; border-top: 1px solid rgba(23,20,22,.35); font-size: 26px; line-height: 1.4; }
+    .s12 .action { margin-top: auto; }
+    .s12 .action strong { display: inline-block; padding-bottom: 10px; border-bottom: 2px solid var(--night); font-size: 31px; line-height: 1.2; }
+    .s12 .action span { display: block; margin-top: 17px; font-size: 22px; line-height: 1.35; word-break: break-word; }
+  </style>
+</head>
+<body>
+  <!-- v3-vibe-layout: restrained type, dense editorial reading, real retreat imagery, dark powder, pink, and forest olive. -->
+
+  <section class="slide s1">
+    <img class="cover-photo" src="assets/practice-ocean.jpg" alt="Солнечный свет на поверхности океана">
+    <div class="cover-photo-shade"></div>
+    <div class="page">
+      <div class="rail"><span class="brand">VAHUE · PORTUGAL 2026</span><span>AWAKE · AWARE · ALIVE</span></div>
+      <h1><span>Wild</span><span>Tantra</span></h1>
+      <p class="master">Пема Гитама</p>
+      <p class="date-focus">5–11 октября 2026</p>
+      <p class="lede">Семь дней практики присутствия — через тело, Сердце и осознанность.</p>
+      <div class="cover-meta"><span>DOMA Portugal<br>Атлантическое побережье</span></div>
+    </div>
+  </section>
+
+  <section class="slide s2">
+    <div class="page">
+      <div class="rail"><span class="brand">Wild Tantra</span><span class="folio">2 / 12</span></div>
+      <div class="essence-grid">
+        <div class="essence-copy">
+          <h2>Вернуться к жизни всем собой</h2>
+          <div class="body-copy">
+            <p>Мы часто живём из головы: анализируем, контролируем или ищем новую стимуляцию. Так жизнь постепенно переходит на автопилот.</p>
+            <p><strong>Wild Tantra — практика присутствия и целостности.</strong> Она начинается не с новой системы убеждений, а с прямого опыта: что происходит в теле, Сердце и уме прямо сейчас?</p>
+          </div>
+          <p class="statement">Практика возвращает связь между ними — и способность отвечать на жизнь всем собой.</p>
+        </div>
+        <figure class="ocean-panel"><img src="assets/practice-ocean.jpg" alt="Свет на поверхности океана"><figcaption class="ocean-caption">AWAKE · AWARE · ALIVE</figcaption></figure>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide s3">
+    <div class="page">
+      <div class="rail"><span class="brand">Жизненная энергия</span><span class="folio">3 / 12</span></div>
+      <div class="energy-head">
+        <h2>Не исключать.<br>Дать место.<br>Найти направление.</h2>
+        <p>Тантра не делит внутренний опыт на правильный и неправильный. <strong>Каждому проявлению жизненной энергии можно найти место, форму и направление.</strong></p>
+      </div>
+      <div class="artifacts">
+        <figure><div class="image-bed"><img src="assets/practice-bud.jpg" alt="Закрытая форма цветка"></div><figcaption>Заметить импульс до того, как включится привычная реакция.</figcaption></figure>
+        <figure><div class="image-bed"><img src="assets/practice-bloom.jpg" alt="Раскрывшийся белый цветок"></div><figcaption>Дать ему форму — не подавляя и не разряжая автоматически.</figcaption></figure>
+      </div>
+      <p class="quote">«Аромат тантры — любовь, а её форма — сознание».</p>
+    </div>
+  </section>
+
+  <section class="slide s4">
+    <div class="page">
+      <div class="rail rail-light"><span class="brand">Как устроена практика</span><span class="folio">4 / 12</span></div>
+      <figure class="practice-image"><img src="assets/practice-ocean.jpg" alt="Свет и движение на поверхности океана"></figure>
+      <div class="practice-copy">
+        <div><h2>Структура есть. Живая работа рождается в группе.</h2><p class="method-intro">Тантрические медитации, дыхание и жизненная энергия, телесные практики, ритуалы, методы Каулы и Чод.</p><p class="sequence">Почувствовать.<br>Увидеть.<br>Назвать.<br>Соединить.</p></div>
+        <div class="practice-flow">
+          <div><p><strong>Тело и дыхание.</strong> Ощущения, удовольствие, напряжение и тонкость восприятия.</p><p><strong>Мысли, эмоции, Сердце и речь.</strong> Увидеть защиты и повторения, услышать свою правду и дать ей стать словами.</p></div>
+          <p class="contact-note">Что-то проживается наедине, что-то — в паре или группе. Вопросы прикосновений и контакта можно заранее обсудить на обязательном ознакомительном звонке.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide s5">
+    <img class="portrait" src="assets/pema-forest.jpg" alt="Пема Гитама в лесу">
+    <div class="page">
+      <div class="rail"><span class="brand">Пема Гитама</span><span class="folio">5 / 12</span></div>
+      <div class="pema-copy">
+        <h2>Мягкость и сила. Любовь и острота. Глубина и дикость.</h2>
+        <p>Больше 25 лет Пема следует и передаёт традицию Тантры Каула. На её принципах она создала WildTantra — собственный подход, раскрытый в трёх книгах и ретритах по всему миру.</p>
+        <p class="muted">Она тонко чувствует человека и группу: знает, когда дать пространство, а когда прямо показать то, что мы привыкли обходить.</p>
+        <div class="quote-field"><p>«Тантра ведёт меня сквозь страхи и возвращает к цельности».</p><span>Пема Гитама</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide s6">
+    <div class="page">
+      <div class="rail rail-light"><span class="brand">Неделя полного погружения</span><span class="folio">6 / 12</span></div>
+      <div class="rhythm-grid">
+        <figure class="rhythm-photo"><img src="assets/doma-road.webp" alt="Дорога через сосновый лес DOMA"></figure>
+        <div class="rhythm-copy">
+          <h2>День собран как одно движение</h2>
+          <div class="slots">
+            <div class="slot"><strong>07:00</strong><p>Первая практика до завтрака, пока ум ещё не разогнался.</p></div>
+            <div class="slot"><strong>11 часов</strong><p>Четыре больших блока практики каждый день.</p></div>
+            <div class="slot"><strong>3 × 2</strong><p>Паузы на еду, отдых и интеграцию опыта.</p></div>
+            <div class="slot"><strong>21:00</strong><p>Начало последней практики; ещё полтора-два часа работы.</p></div>
+          </div>
+          <p class="intensity">По глубине ретрит можно сравнить с випассаной, но формат разнообразнее: медитация чередуется с дыханием, движением, телесной и групповой работой.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide s7">
+    <img class="flower" src="assets/practice-bloom.jpg" alt="">
+    <div class="page">
+      <div class="rail rail-light"><span class="brand">VAHUE × WILD TANTRA</span><span class="folio">7 / 12</span></div>
+      <div class="vahue-copy">
+        <p class="joint"><span>04</span> совместный ретрит</p>
+        <h2>Программа, которая знает, с чем мы приезжаем</h2>
+        <div class="vahue-columns"><p>Пема уже знает общий бэкграунд сообщества, семейные и поколенческие истории, отношения с телом, собой и другими.</p><p>Всё, что накопилось за эти годы, становится частью живой программы — опыта, который действительно про нас и для нас.</p></div>
+        <div class="levels"><strong>Первая и вторая ступени</strong><p>Для тех, кто приезжает впервые, и для тех, кто продолжает. Одни и те же практики с каждым ретритом могут раскрываться глубже.</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide s8">
+    <img class="person-photo" src="assets/egor-rudi-portrait.jpg" alt="Егор Руди во время разговора о Wild Tantra">
+    <div class="person-tint"></div>
+    <div class="page">
+      <div class="rail"><span class="brand">Как это переживается</span><span class="folio">8 / 12</span></div>
+      <div class="testimonial-copy">
+        <blockquote>«Могу сказать только, что я пару раз плакал от одной мысли, что со мной этот опыт мог бы не случиться. Сначала тебя родили, а потом ещё нужно самому почувствовать себя по-настоящему живым».</blockquote>
+        <p class="person"><strong>Егор Руди</strong><span>Участник Wild Tantra</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide s9">
+    <img class="person-photo" src="assets/lena-degtyar-official.jpg" alt="Лена Дегтярь">
+    <div class="page">
+      <div class="rail"><span class="brand">Как это переживается</span><span class="folio">9 / 12</span></div>
+      <div class="testimonial-copy">
+        <blockquote>«Я вернулась домой — к мудрости моего тела, которое всё знало, а я забыла. Давно в моей жизни не было такой ясности, как та, которую я получаю в тантре».</blockquote>
+        <p class="person"><strong>Лена Дегтярь</strong><span>Участница Wild Tantra</span></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide s10">
+    <div class="page">
+      <div class="rail"><span class="brand">DOMA Portugal</span><span class="folio">10 / 12</span></div>
+      <div class="place-collage"><img src="assets/doma-pool.webp" alt="Бассейн DOMA Portugal среди леса"><div class="place-side"><img src="assets/doma-road.webp" alt="Дорога через лес к DOMA"><img src="assets/doma-pavilion-2026.jpg" alt="Павильон для встреч в лесу DOMA"></div></div>
+      <div class="place-copy"><div><h2>Пространство для глубокой работы</h2><p class="amenities">Сосновый лес · зал для практики · паровой купол · ледяная ванна · террасы · бассейн</p></div><p>Историческая усадьба в получасе от Лиссабона и океана — место, где можно полностью остаться внутри процесса.</p></div>
+    </div>
+  </section>
+
+  <section class="slide s11">
+    <img class="room-photo" src="assets/doma-room-2026.jpg" alt="Комната в DOMA Portugal">
+    <div class="page">
+      <div class="rail rail-light"><span class="brand">Пространство поддерживает</span><span class="folio">11 / 12</span></div>
+      <div class="rest-copy">
+        <h2>После интенсивности — место для восстановления</h2>
+        <p>Светлые комнаты, террасы и сосновый лес помогают возвращаться к себе между большими блоками практики.</p>
+        <p>Каждый день шефы DOMA готовят специальное веганское меню, разработанное вместе с Пемой под ритм недели.</p>
+        <p class="rest-list">Зал для практики · паровой купол · бассейн · пространство для отдыха</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="slide s12">
+    <img class="venue-bg" src="assets/doma-main.webp" alt="Историческая усадьба DOMA Portugal">
+    <div class="venue-shade"></div>
+    <div class="page">
+      <div class="rail rail-light"><span class="brand">Участие</span><span class="folio">12 / 12</span></div>
+      <div class="cta-panel">
+        <h2>Если это отзывается — оставьте заявку</h2>
+        <div class="facts">
+          <p><strong>5–11 октября 2026</strong> · DOMA Portugal</p>
+          <p><strong>80 участников</strong> · поровну мужчин и женщин</p>
+          <p><strong>Язык:</strong> Пема ведёт на английском, между собой можно общаться по-русски</p>
+          <p><strong>Участие — 3 900 €</strong></p>
+          <p>Проживание, дорога и трансферы оплачиваются отдельно.</p>
+        </div>
+        <p class="call-note">Короткий ознакомительный звонок — обязательная часть процесса: команда расскажет о практиках, ответит на вопросы и поможет понять, подходит ли вам сейчас этот опыт.</p>
+        <div class="action"><strong>Открыть полную программу и заявку</strong><span>velvetslava.github.io/wild-tantra-portugal-2026</span></div>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

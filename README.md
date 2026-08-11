@@ -10,3 +10,12 @@
 
 Подробности и правила проверки описаны в `REVIEW_SYSTEM.md`.
 
+## Instagram-карусель
+
+Финальная карусель Wild Tantra на 12 слайдов находится в каталоге [`carousel/`](carousel/).
+
+- [`carousel/index.html`](carousel/index.html) — редактируемый макет и браузерное превью;
+- [`carousel/png/`](carousel/png/) — готовые PNG 1080 × 1350;
+- [`carousel/download/wild-tantra-carousel-12-slides.zip`](carousel/download/wild-tantra-carousel-12-slides.zip) — архив для публикации;
+- [`carousel/source/`](carousel/source/) — сценарий, подпись, alt-тексты и источники портретов;
+- [`carousel/contact-sheet.jpg`](carousel/contact-sheet.jpg) — вся карусель одним обзорным листом.
