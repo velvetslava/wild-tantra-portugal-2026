@@ -1,0 +1,16 @@
+project_slug: wild-tantra-carousel
+title: "Wild Tantra Portugal 2026"
+owner: "velvetslava"
+language: "ru"
+inputs:
+  - source/script_ru.md
+  - source/caption_ru.md
+  - source/alt_text_ru.md
+  - source/portrait_sources.md
+outputs:
+  png_dir: png
+  zip_file: download/wild-tantra-carousel-12-slides.zip
+  contact_sheet: contact-sheet.jpg
+canonical_build: index.html
+slide_count: 12
+dimensions: "1080x1350"

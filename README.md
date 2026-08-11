@@ -19,3 +19,6 @@
 - [`carousel/download/wild-tantra-carousel-12-slides.zip`](carousel/download/wild-tantra-carousel-12-slides.zip) — архив для публикации;
 - [`carousel/source/`](carousel/source/) — сценарий, подпись, alt-тексты и источники портретов;
 - [`carousel/contact-sheet.jpg`](carousel/contact-sheet.jpg) — вся карусель одним обзорным листом.
+- [`carousel/HANDOFF_FOR_SLAVA.md`](carousel/HANDOFF_FOR_SLAVA.md) — передача процесса, дизайн-решений и дальнейшей работы Славе;
+- [`carousel/workflow/`](carousel/workflow/) — два carousel-скилла, экспортёр, история итераций и воспроизводимые команды.
+- [`carousel/download/wild-tantra-carousel-workflow-for-slava.zip`](carousel/download/wild-tantra-carousel-workflow-for-slava.zip) — весь handoff и оба скилла одним архивом.

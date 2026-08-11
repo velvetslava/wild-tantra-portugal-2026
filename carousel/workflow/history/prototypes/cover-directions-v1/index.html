@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wild Tantra · 5 вариантов обложки</title>
+  <style>
+    @font-face { font-family: Onest; src: url("../../build/assets/onest-400.ttf") format("truetype"); font-weight: 400; }
+    @font-face { font-family: Onest; src: url("../../build/assets/onest-600.ttf") format("truetype"); font-weight: 600; }
+
+    :root {
+      --night: #171416;
+      --powder: #d996b5;
+      --powder-soft: #efd1df;
+      --paper: #f3f0e7;
+      --white: #fffdf9;
+      --olive: #747a67;
+      --olive-deep: #555b4c;
+    }
+
+    * { box-sizing: border-box; }
+    html, body { min-height: 100%; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      overflow: hidden;
+      background: #0b090a;
+      font-family: Onest, Arial, sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+    ::selection { background: var(--powder); color: var(--night); }
+
+    #stage {
+      position: fixed;
+      left: 50%;
+      top: calc(50% - 28px);
+      width: 1080px;
+      height: 1350px;
+      transform-origin: center;
+    }
+
+    .cover {
+      position: relative;
+      width: 1080px;
+      height: 1350px;
+      overflow: hidden;
+      isolation: isolate;
+      color: var(--night);
+      background: var(--paper);
+    }
+    .cover::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      z-index: 30;
+      pointer-events: none;
+      box-shadow: inset 0 0 0 1px rgba(23,20,22,.1);
+    }
+    .cover img { display: block; }
+    .rail {
+      position: absolute;
+      z-index: 10;
+      top: 54px;
+      left: 58px;
+      right: 58px;
+      min-height: 42px;
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      border-bottom: 1px solid currentColor;
+      font-size: 20px;
+      line-height: 1;
+      font-weight: 600;
+      letter-spacing: .075em;
+      text-transform: uppercase;
+    }
+    .rail span:last-child { font-variant-numeric: tabular-nums; }
+    h1, p { margin: 0; }
+    h1 { font-size: 76px; line-height: .98; letter-spacing: -.035em; font-weight: 600; }
+    .master { font-size: 34px; line-height: 1.15; font-weight: 600; letter-spacing: -.02em; }
+    .promise { font-size: 28px; line-height: 1.44; letter-spacing: -.012em; }
+    .date { font-size: 28px; line-height: 1.2; font-weight: 600; }
+    .place { font-size: 23px; line-height: 1.25; }
+
+    /* 1 — Ocean: the retreat is felt before it is explained. */
+    .ocean { color: var(--white); background: var(--night); }
+    .ocean .image { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center; filter: grayscale(1) contrast(1.12) brightness(.72); }
+    .ocean .veil { position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(23,20,22,.18) 0%, rgba(23,20,22,.1) 38%, rgba(23,20,22,.86) 100%); }
+    .ocean .rail { color: rgba(255,253,249,.84); }
+    .ocean .copy { position: absolute; z-index: 4; left: 58px; right: 190px; bottom: 190px; }
+    .ocean h1 { color: var(--powder); max-width: 640px; }
+    .ocean .master { margin-top: 26px; }
+    .ocean .promise { margin-top: 34px; max-width: 640px; color: rgba(255,253,249,.82); }
+    .ocean .meta { position: absolute; z-index: 4; left: 58px; right: 58px; bottom: 58px; display: flex; justify-content: space-between; align-items: flex-end; padding-top: 23px; border-top: 1px solid rgba(255,253,249,.45); }
+    .ocean .place { color: rgba(255,253,249,.72); text-align: right; }
+
+    /* 2 — Pema: human presence as the first point of trust. */
+    .portrait { color: var(--white); background: var(--night); }
+    .portrait .image { position: absolute; top: 0; left: 0; width: 59%; height: 100%; object-fit: cover; object-position: 56% center; filter: saturate(.64) contrast(1.02) brightness(.82); }
+    .portrait .shade { position: absolute; inset: 0; z-index: 1; background: linear-gradient(90deg, rgba(23,20,22,.02) 36%, var(--night) 61%); }
+    .portrait .rail { color: rgba(255,253,249,.84); }
+    .portrait .copy { position: absolute; z-index: 4; top: 217px; right: 58px; width: 430px; }
+    .portrait h1 { color: var(--powder); }
+    .portrait .master { margin-top: 35px; color: var(--white); }
+    .portrait .promise { margin-top: 53px; color: #d8d0d3; }
+    .portrait .meta { position: absolute; z-index: 4; right: 58px; bottom: 61px; width: 430px; padding-top: 25px; border-top: 1px solid rgba(255,253,249,.28); }
+    .portrait .place { margin-top: 11px; color: #bfb6ba; }
+
+    /* 3 — Doma: an editorial invitation into the real place. */
+    .doma { background: var(--paper); }
+    .doma .image { position: absolute; inset: 0 0 auto; width: 100%; height: 765px; object-fit: cover; object-position: center 43%; filter: saturate(.72) contrast(1.03); }
+    .doma .image-shade { position: absolute; inset: 0 0 auto; height: 200px; z-index: 1; background: linear-gradient(180deg, rgba(23,20,22,.5), transparent); }
+    .doma .rail { color: var(--white); border-color: rgba(255,253,249,.62); }
+    .doma .paper { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; height: 620px; padding: 60px 58px 58px; background: var(--paper); display: grid; grid-template-columns: 1.16fr .84fr; gap: 58px; }
+    .doma h1 { color: #9f4a71; }
+    .doma .master { margin-top: 24px; }
+    .doma .right { align-self: end; padding-bottom: 5px; }
+    .doma .promise { color: #625c5f; }
+    .doma .meta { margin-top: 67px; padding-top: 22px; border-top: 1px solid rgba(23,20,22,.28); }
+    .doma .place { margin-top: 10px; color: #625c5f; }
+
+    /* 4 — Bloom: tactile, feminine, alive without becoming decorative noise. */
+    .bloom { background: var(--powder-soft); }
+    .bloom .image { position: absolute; right: -190px; top: 134px; width: 860px; height: 860px; object-fit: cover; object-position: center; border-radius: 50%; filter: saturate(.58) contrast(1.02); }
+    .bloom .image-ring { position: absolute; z-index: 2; right: -220px; top: 104px; width: 920px; height: 920px; border: 1px solid rgba(23,20,22,.18); border-radius: 50%; }
+    .bloom .rail { color: rgba(23,20,22,.78); }
+    .bloom .copy { position: absolute; z-index: 4; left: 58px; top: 255px; width: 510px; }
+    .bloom h1 { color: #8f3f65; }
+    .bloom .master { margin-top: 29px; }
+    .bloom .promise { margin-top: 215px; max-width: 430px; color: #554e51; }
+    .bloom .meta { position: absolute; z-index: 4; left: 58px; right: 58px; bottom: 58px; display: grid; grid-template-columns: 1fr 1fr; gap: 44px; padding-top: 24px; border-top: 1px solid rgba(23,20,22,.24); }
+    .bloom .place { color: #625c5f; text-align: right; }
+
+    /* 5 — Quiet: restraint and one narrow, intimate trace of place. */
+    .quiet { color: var(--white); background: var(--night); }
+    .quiet .strip { position: absolute; z-index: 1; right: 58px; top: 151px; width: 286px; height: 902px; object-fit: cover; object-position: 50% center; filter: grayscale(.9) saturate(.35) contrast(1.08) brightness(.82); }
+    .quiet .strip-mark { position: absolute; z-index: 2; right: 34px; top: 127px; width: 286px; height: 902px; border: 1px solid rgba(217,150,181,.62); }
+    .quiet .rail { color: rgba(255,253,249,.8); }
+    .quiet .copy { position: absolute; z-index: 4; left: 58px; top: 242px; width: 610px; }
+    .quiet h1 { color: var(--powder); }
+    .quiet .master { margin-top: 28px; }
+    .quiet .promise { margin-top: 102px; width: 510px; color: #d5cdd0; }
+    .quiet .meta { position: absolute; z-index: 4; left: 58px; bottom: 61px; width: 610px; display: flex; gap: 50px; align-items: flex-end; padding-top: 24px; border-top: 1px solid rgba(255,253,249,.28); }
+    .quiet .place { color: #bfb6ba; }
+
+    .proto-picker {
+      position: fixed;
+      bottom: 24px;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2147483647;
+      display: flex;
+      align-items: center;
+      gap: 2px;
+      padding: 4px;
+      border-radius: 999px;
+      background: rgba(10, 10, 10, 0.82);
+      -webkit-backdrop-filter: blur(12px) saturate(1.4);
+      backdrop-filter: blur(12px) saturate(1.4);
+      box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.08) inset,
+        0 8px 24px rgba(0, 0, 0, 0.24),
+        0 2px 6px rgba(0, 0, 0, 0.12);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 13px;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    .proto-picker-highlight {
+      position: absolute;
+      top: 4px;
+      left: 0;
+      height: 28px;
+      border-radius: 999px;
+      background: rgba(255, 255, 255, 0.12);
+      will-change: transform;
+    }
+
+    .proto-picker[data-ready] .proto-picker-highlight {
+      transition:
+        transform 250ms cubic-bezier(0.23, 1, 0.32, 1),
+        width 250ms cubic-bezier(0.23, 1, 0.32, 1);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .proto-picker[data-ready] .proto-picker-highlight { transition: none; }
+    }
+
+    .proto-picker-item {
+      position: relative;
+      display: flex;
+      align-items: center;
+      height: 28px;
+      padding: 0 12px;
+      border: 0;
+      border-radius: 999px;
+      background: transparent;
+      color: rgba(255, 255, 255, 0.55);
+      font: inherit;
+      cursor: pointer;
+      transition: color 150ms ease-out;
+    }
+
+    .proto-picker-item:hover { color: rgba(255, 255, 255, 0.85); }
+    .proto-picker-item:active { transform: scale(0.97); }
+    .proto-picker-item:focus-visible { outline: 2px solid rgba(255, 255, 255, 0.4); outline-offset: 2px; }
+    .proto-picker-item[data-active] { color: #fff; }
+
+    .proto-picker[data-position="top"] { bottom: auto; top: 24px; }
+
+    @media (max-width: 760px) {
+      .proto-picker { max-width: calc(100vw - 16px); overflow-x: auto; justify-content: flex-start; }
+      .proto-picker-item { flex: 0 0 auto; padding: 0 10px; }
+    }
+  </style>
+</head>
+<body>
+  <main id="stage" aria-live="polite"></main>
+
+  <nav class="proto-picker" aria-label="Prototype variants">
+    <span class="proto-picker-highlight" aria-hidden="true"></span>
+    <button class="proto-picker-item" data-active aria-current="true">Океан</button>
+    <button class="proto-picker-item">Пема</button>
+    <button class="proto-picker-item">DOMA</button>
+    <button class="proto-picker-item">Цветок</button>
+    <button class="proto-picker-item">Тишина</button>
+  </nav>
+
+  <script type="module">
+    import ocean from './variant-ocean.js';
+    import portrait from './variant-pema.js';
+    import doma from './variant-doma.js';
+    import bloom from './variant-bloom.js';
+    import quiet from './variant-quiet.js';
+
+    const variants = [ocean, portrait, doma, bloom, quiet];
+    const stage = document.getElementById('stage');
+    const picker = document.querySelector('.proto-picker');
+    const highlight = picker.querySelector('.proto-picker-highlight');
+    const items = [...picker.querySelectorAll('.proto-picker-item:not(.proto-picker-replay)')];
+    const replay = picker.querySelector('.proto-picker-replay');
+    let current = 0;
+
+    function fitStage() {
+      const scale = Math.min((window.innerWidth - 32) / 1080, (window.innerHeight - 94) / 1350, 1);
+      stage.style.transform = `translate(-50%, -50%) scale(${scale})`;
+    }
+
+    function moveHighlight() {
+      const el = items[current];
+      highlight.style.width = el.offsetWidth + 'px';
+      highlight.style.transform = `translateX(${el.offsetLeft}px)`;
+    }
+
+    function mount(i) {
+      stage.innerHTML = '';
+      requestAnimationFrame(() => { stage.innerHTML = variants[i](); });
+    }
+
+    function setActive(i) {
+      if (i < 0 || i >= variants.length) return;
+      current = i;
+      items.forEach((el, j) => {
+        el.toggleAttribute('data-active', j === i);
+        if (j === i) el.setAttribute('aria-current', 'true');
+        else el.removeAttribute('aria-current');
+      });
+      moveHighlight();
+      const url = new URL(location);
+      url.searchParams.set('v', i + 1);
+      history.replaceState(null, '', url);
+      mount(i);
+    }
+
+    items.forEach((el, i) => el.addEventListener('click', () => setActive(i)));
+    replay?.addEventListener('click', () => mount(current));
+    window.addEventListener('resize', () => { moveHighlight(); fitStage(); });
+
+    document.addEventListener('keydown', (e) => {
+      if (/^(INPUT|TEXTAREA|SELECT)$/.test(e.target.tagName) || e.target.isContentEditable) return;
+      if (e.metaKey || e.ctrlKey || e.altKey) return;
+      const num = parseInt(e.key, 10);
+      if (num >= 1 && num <= variants.length) setActive(num - 1);
+      else if (e.key === 'ArrowRight') setActive((current + 1) % variants.length);
+      else if (e.key === 'ArrowLeft') setActive((current - 1 + variants.length) % variants.length);
+      else if (e.key === 'r' || e.key === 'R') mount(current);
+    });
+
+    fitStage();
+    setActive((parseInt(new URLSearchParams(location.search).get('v'), 10) || 1) - 1);
+    requestAnimationFrame(() => requestAnimationFrame(() => picker.setAttribute('data-ready', '')));
+  </script>
+</body>
+</html>
